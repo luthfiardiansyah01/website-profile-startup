@@ -39,7 +39,7 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-1">
-            <NavLink href="#" icon={<Users size={18} />} text="About" />
+            <NavLink href="#about" icon={<Users size={18} />} text="About" />
             <NavLink href="#programs" icon={<GanttChartSquare size={18} />} text="Programs" />
             <NavLink href="#financials" icon={<BarChart3 size={18} />} text="Financials" />
             <NavLink href="#sponsors" icon={<HeartHandshake size={18} />} text="Partnership" />
@@ -66,7 +66,7 @@ const Header = () => {
         }`}
       >
         <div className="container mx-auto px-4 flex flex-col space-y-3">
-          <NavLink href="#" icon={<Users size={18} />} text="About" mobile />
+          <NavLink href="#about" icon={<Users size={18} />} text="About" mobile />
           <NavLink href="#programs" icon={<GanttChartSquare size={18} />} text="Programs" mobile />
           <NavLink href="#financials" icon={<BarChart3 size={18} />} text="Financials" mobile />
           <NavLink href="#sponsors" icon={<HeartHandshake size={18} />} text="Partnership" mobile />
