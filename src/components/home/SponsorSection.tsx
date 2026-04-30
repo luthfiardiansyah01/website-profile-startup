@@ -59,16 +59,16 @@ const SponsorSection = () => {
     <section id="sponsors" className="py-20 relative">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <span className="text-[#9c27b0] uppercase tracking-wider text-sm font-medium">Our Sponsors</span>
+          <span className="text-[#9c27b0] uppercase tracking-wider text-sm font-medium">Our Partnership</span>
           <h2 className="text-3xl md:text-4xl font-bold mt-2 bg-gradient-to-r from-white to-white/80 text-transparent bg-clip-text">
             Partners in Innovation
           </h2>
           <p className="mt-4 text-white/70 max-w-2xl mx-auto">
-            Meet the visionary organizations that support our mission to accelerate startup success.
+            Meet the visionary organizations that partner with our mission to accelerate startup success.
           </p>
         </div>
 
-        {/* Sponsors Grid */}
+        {/* Partnership Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 mb-16">
           {sponsors.map((sponsor) => (
             <SponsorCard key={sponsor.id} sponsor={sponsor} />
@@ -81,11 +81,11 @@ const SponsorSection = () => {
             <div className="relative z-10">
               <div className="mb-6 flex items-center">
                 <CircleDollarSign className="w-8 h-8 text-[#00f0ff] mr-3" />
-                <h3 className="text-2xl font-semibold">Become a Sponsor</h3>
+                <h3 className="text-2xl font-semibold">Become a Partner</h3>
               </div>
-              
+
               <p className="text-white/70 mb-6">
-                Join our network of forward-thinking organizations supporting innovation and growth for the next generation of startups.
+                Join our network of forward-thinking organizations partnering for innovation and growth with the next generation of startups.
               </p>
               
               <div className="space-y-4 mb-8">
@@ -109,10 +109,15 @@ const SponsorSection = () => {
                 </div>
               </div>
               
-              <button className="px-6 py-3 rounded-full bg-gradient-to-r from-[#00f0ff] to-[#00f0ff]/70 text-[#0a0a1f] font-medium flex items-center gap-2 hover:shadow-[0_0_15px_rgba(0,240,255,0.5)] transition-all duration-300">
+              <a
+                href="https://forms.google.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 rounded-full bg-gradient-to-r from-[#00f0ff] to-[#00f0ff]/70 text-[#0a0a1f] font-medium inline-flex items-center gap-2 hover:shadow-[0_0_15px_rgba(0,240,255,0.5)] transition-all duration-300"
+              >
                 <span>Partner With Us</span>
                 <ExternalLink size={16} />
-              </button>
+              </a>
             </div>
             
             {/* Background Decoration */}

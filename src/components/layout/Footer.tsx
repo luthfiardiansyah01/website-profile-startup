@@ -33,7 +33,7 @@ const Footer = () => {
               <FooterLink text="About Us" />
               <FooterLink text="Programs" />
               <FooterLink text="Financial Reports" />
-              <FooterLink text="Become a Sponsor" />
+              <FooterLink text="Become a Partner" href="https://forms.google.com" />
               <FooterLink text="Join Our Network" />
             </ul>
           </div>
@@ -83,9 +83,9 @@ const SocialIcon = ({ icon }: { icon: React.ReactNode }) => (
   </a>
 );
 
-const FooterLink = ({ text }: { text: string }) => (
+const FooterLink = ({ text, href = '#' }: { text: string; href?: string }) => (
   <li>
-    <a href="#" className="text-white/70 hover:text-[#00f0ff] transition-colors flex items-center gap-1 group">
+    <a href={href} target={href !== '#' ? '_blank' : undefined} rel={href !== '#' ? 'noopener noreferrer' : undefined} className="text-white/70 hover:text-[#00f0ff] transition-colors flex items-center gap-1 group">
       <span>{text}</span>
       <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-300" />
     </a>

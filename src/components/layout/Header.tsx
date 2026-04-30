@@ -42,7 +42,7 @@ const Header = () => {
             <NavLink href="#" icon={<Users size={18} />} text="About" />
             <NavLink href="#programs" icon={<GanttChartSquare size={18} />} text="Programs" />
             <NavLink href="#financials" icon={<BarChart3 size={18} />} text="Financials" />
-            <NavLink href="#sponsors" icon={<HeartHandshake size={18} />} text="Sponsors" />
+            <NavLink href="#sponsors" icon={<HeartHandshake size={18} />} text="Partnership" />
             <button className="ml-4 px-5 py-2.5 rounded-full bg-gradient-to-r from-[#ff00c8] to-[#9c27b0] text-white font-medium flex items-center space-x-2 group hover:shadow-[0_0_15px_rgba(255,0,200,0.5)] transition-all duration-300">
               <span>Connect</span>
               <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
@@ -69,7 +69,7 @@ const Header = () => {
           <NavLink href="#" icon={<Users size={18} />} text="About" mobile />
           <NavLink href="#programs" icon={<GanttChartSquare size={18} />} text="Programs" mobile />
           <NavLink href="#financials" icon={<BarChart3 size={18} />} text="Financials" mobile />
-          <NavLink href="#sponsors" icon={<HeartHandshake size={18} />} text="Sponsors" mobile />
+          <NavLink href="#sponsors" icon={<HeartHandshake size={18} />} text="Partnership" mobile />
           <button className="px-5 py-2.5 rounded-full bg-gradient-to-r from-[#ff00c8] to-[#9c27b0] text-white font-medium flex items-center justify-center space-x-2 group hover:shadow-[0_0_15px_rgba(255,0,200,0.5)] transition-all duration-300 w-full">
             <span>Connect</span>
             <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
