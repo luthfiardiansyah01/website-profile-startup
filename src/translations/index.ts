@@ -8,7 +8,9 @@ export const translations = {
     donate: 'Donate',
 
     // Hero Section
-    heroTitle: 'Pioneering The',
+    part1 = 'Pioneering The';
+    part2 = 'Future of Innovations';
+    heroTitle = `${part1} ${part2}`;
     heroSubtitle: 'Accelerating innovation through AI-powered infrastructure for startups and enterprises',
     heroGetStarted: 'Get Started',
     heroLearnMore: 'Learn More',
