@@ -27,7 +27,7 @@ const PricingSection = () => {
         'Monthly mentorship sessions',
         'Network access to partner ecosystem',
       ],
-      pricingRange: '$15,000 - $25,000/year',
+      pricingRange: 'Rp 232.5M - Rp 387.5M/year',
       cta: 'Request Consultation',
     },
     {
@@ -42,7 +42,7 @@ const PricingSection = () => {
         'Team training and certification',
         'Ongoing support and optimization',
       ],
-      pricingRange: '$40,000 - $75,000/year',
+      pricingRange: 'Rp 620M - Rp 1.16B/year',
       cta: 'Request Consultation',
     },
     {
@@ -57,7 +57,7 @@ const PricingSection = () => {
         'User engagement analytics dashboard',
         'Quarterly impact assessments',
       ],
-      pricingRange: '$25,000 - $45,000/year',
+      pricingRange: 'Rp 387.5M - Rp 697.5M/year',
       cta: 'Request Consultation',
     },
     {
@@ -73,7 +73,7 @@ const PricingSection = () => {
         'Government compliance reporting',
         'Custom dashboards for decision-makers',
       ],
-      pricingRange: 'Indicative: $50,000 - $100,000/year',
+      pricingRange: 'Indicative: Rp 775M - Rp 1.55B/year',
       isGovernment: true,
       cta: 'Request Official Quotation',
     },
@@ -90,7 +90,7 @@ const PricingSection = () => {
         'Quarterly strategic reviews',
         'Custom integrations with existing systems',
       ],
-      pricingRange: '$100,000 - $250,000/year',
+      pricingRange: 'Rp 1.55B - Rp 3.875B/year',
       cta: 'Request Consultation',
     },
     {
@@ -106,7 +106,7 @@ const PricingSection = () => {
         'Monthly strategic planning sessions',
         'Annual product roadmap collaboration',
       ],
-      pricingRange: '$200,000 - $500,000/year',
+      pricingRange: 'Rp 3.1B - Rp 7.75B/year',
       isGovernment: true,
       cta: 'Request Official Quotation',
     },
