@@ -8,7 +8,7 @@ export const translations = {
     donate: 'Donate',
 
     // Hero Section
-    heroTitle: 'Build Tomorrow\'s Solutions Today',
+    heroTitle: 'Pioneering The',
     heroSubtitle: 'Accelerating innovation through AI-powered infrastructure for startups and enterprises',
     heroGetStarted: 'Get Started',
     heroLearnMore: 'Learn More',
