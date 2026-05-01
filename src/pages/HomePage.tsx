@@ -1,7 +1,7 @@
 import React from 'react';
 import HeroSection from '../components/home/HeroSection';
 import ProgramSection from '../components/home/ProgramSection';
-import FinancialSection from '../components/home/FinancialSection';
+import PricingSection from '../components/home/PricingSection';
 import SponsorSection from '../components/home/SponsorSection';
 
 const HomePage = () => {
@@ -9,7 +9,7 @@ const HomePage = () => {
     <>
       <HeroSection />
       <ProgramSection />
-      <FinancialSection />
+      <PricingSection />
       <SponsorSection />
     </>
   );

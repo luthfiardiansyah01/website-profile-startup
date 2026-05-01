@@ -32,7 +32,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <FooterLink text="About Us" />
               <FooterLink text="Programs" />
-              <FooterLink text="Financial Reports" />
+              <FooterLink text="Pricing" href="#pricing" />
               <FooterLink text="Become a Partner" href="https://forms.google.com" />
               <FooterLink text="Join Our Network" />
             </ul>
