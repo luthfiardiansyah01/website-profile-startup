@@ -8,8 +8,7 @@ export const translations = {
     donate: 'Donate',
 
     // Hero Section
-    heroTitle: 'Pioneering The',
-    hero2Title: 'Future of Innovations',
+    heroTitle: 'Shaping Tomorrow’s Innovations',
     heroSubtitle: 'Accelerating innovation through AI-powered infrastructure for startups and enterprises',
     heroGetStarted: 'Get Started',
     heroLearnMore: 'Learn More',
@@ -141,7 +140,7 @@ export const translations = {
     donate: 'Donasi',
 
     // Hero Section
-    heroTitle: 'Bangun Solusi Masa Depan Hari Ini',
+    heroTitle: 'Membentuk Inovasi Masa Depan',
     heroSubtitle: 'Mempercepat inovasi melalui infrastruktur berbasis AI untuk startup dan perusahaan',
     heroGetStarted: 'Mulai Sekarang',
     heroLearnMore: 'Pelajari Lebih Lanjut',
