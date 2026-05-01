@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Lightbulb, Building, Users, Globe, ArrowRight, Rocket, Award, Target } from 'lucide-react';
 import ProgramCard from '../ui/ProgramCard';
+import { useLanguage } from '../../context/LanguageContext';
 
 const ProgramSection = () => {
   const [activeTab, setActiveTab] = useState('social');
+  const { t } = useLanguage();
 
   const socialPrograms = [
     {
@@ -63,12 +65,12 @@ const ProgramSection = () => {
     <section id="programs" className="py-20 relative">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <span className="text-[#00f0ff] uppercase tracking-wider text-sm font-medium">Our Programs</span>
+          <span className="text-[#00f0ff] uppercase tracking-wider text-sm font-medium">{t('programsLabel')}</span>
           <h2 className="text-3xl md:text-4xl font-bold mt-2 bg-gradient-to-r from-white to-white/80 text-transparent bg-clip-text">
-            Transformative Initiatives
+            {t('programsTitle')}
           </h2>
           <p className="mt-4 text-white/70 max-w-2xl mx-auto">
-            Choose from our range of specialized programs designed to propel startups at different stages and sectors.
+            {t('programsDescription')}
           </p>
         </div>
 

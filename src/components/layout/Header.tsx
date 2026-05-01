@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ChevronRight, GanttChartSquare, Users, BarChart3, HeartHandshake } from 'lucide-react';
+import { Menu, X, ChevronRight, GanttChartSquare, Users, BarChart3, HeartHandshake, Globe } from 'lucide-react';
 import startupIcon from '@/assets/startup-transparan-2.png'
 import NavLink from '../ui/NavLink';
+import { useLanguage } from '../../context/LanguageContext';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,10 +41,35 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-1">
-            <NavLink href="#about" icon={<Users size={18} />} text="About" />
-            <NavLink href="#programs" icon={<GanttChartSquare size={18} />} text="Programs" />
-            <NavLink href="#pricing" icon={<BarChart3 size={18} />} text="Pricing" />
-            <NavLink href="#sponsors" icon={<HeartHandshake size={18} />} text="Partnership" />
+            <NavLink href="#about" icon={<Users size={18} />} text={t('about')} />
+            <NavLink href="#programs" icon={<GanttChartSquare size={18} />} text={t('programs')} />
+            <NavLink href="#pricing" icon={<BarChart3 size={18} />} text={t('pricing')} />
+            <NavLink href="#sponsors" icon={<HeartHandshake size={18} />} text={t('sponsors')} />
+
+            {/* Language Switcher */}
+            <div className="ml-4 flex items-center gap-2 bg-white/10 rounded-full p-1">
+              <button
+                onClick={() => setLanguage('en')}
+                className={`px-3 py-1 rounded-full text-sm font-medium transition-all ${
+                  language === 'en'
+                    ? 'bg-gradient-to-r from-[#00f0ff] to-[#00f0ff]/70 text-[#0a0a1f]'
+                    : 'text-white/70 hover:text-white'
+                }`}
+              >
+                EN
+              </button>
+              <button
+                onClick={() => setLanguage('id')}
+                className={`px-3 py-1 rounded-full text-sm font-medium transition-all ${
+                  language === 'id'
+                    ? 'bg-gradient-to-r from-[#00f0ff] to-[#00f0ff]/70 text-[#0a0a1f]'
+                    : 'text-white/70 hover:text-white'
+                }`}
+              >
+                ID
+              </button>
+            </div>
+
             <button className="ml-4 px-5 py-2.5 rounded-full bg-gradient-to-r from-[#ff00c8] to-[#9c27b0] text-white font-medium flex items-center space-x-2 group hover:shadow-[0_0_15px_rgba(255,0,200,0.5)] transition-all duration-300">
               <span>Connect</span>
               <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
@@ -60,16 +87,41 @@ const Header = () => {
       </div>
 
       {/* Mobile Navigation */}
-      <nav 
+      <nav
         className={`md:hidden absolute w-full bg-[#0a0a1f]/95 backdrop-blur-lg transition-all duration-300 ease-in-out ${
-          mobileMenuOpen ? 'max-h-[300px] py-4 opacity-100' : 'max-h-0 py-0 opacity-0 overflow-hidden'
+          mobileMenuOpen ? 'max-h-[420px] py-4 opacity-100' : 'max-h-0 py-0 opacity-0 overflow-hidden'
         }`}
       >
         <div className="container mx-auto px-4 flex flex-col space-y-3">
-          <NavLink href="#about" icon={<Users size={18} />} text="About" mobile />
-          <NavLink href="#programs" icon={<GanttChartSquare size={18} />} text="Programs" mobile />
-          <NavLink href="#pricing" icon={<BarChart3 size={18} />} text="Pricing" mobile />
-          <NavLink href="#sponsors" icon={<HeartHandshake size={18} />} text="Partnership" mobile />
+          <NavLink href="#about" icon={<Users size={18} />} text={t('about')} mobile />
+          <NavLink href="#programs" icon={<GanttChartSquare size={18} />} text={t('programs')} mobile />
+          <NavLink href="#pricing" icon={<BarChart3 size={18} />} text={t('pricing')} mobile />
+          <NavLink href="#sponsors" icon={<HeartHandshake size={18} />} text={t('sponsors')} mobile />
+
+          {/* Mobile Language Switcher */}
+          <div className="flex items-center gap-2 bg-white/10 rounded-full p-1 w-full justify-center">
+            <button
+              onClick={() => setLanguage('en')}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                language === 'en'
+                  ? 'bg-gradient-to-r from-[#00f0ff] to-[#00f0ff]/70 text-[#0a0a1f]'
+                  : 'text-white/70 hover:text-white'
+              }`}
+            >
+              EN
+            </button>
+            <button
+              onClick={() => setLanguage('id')}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                language === 'id'
+                  ? 'bg-gradient-to-r from-[#00f0ff] to-[#00f0ff]/70 text-[#0a0a1f]'
+                  : 'text-white/70 hover:text-white'
+              }`}
+            >
+              ID
+            </button>
+          </div>
+
           <button className="px-5 py-2.5 rounded-full bg-gradient-to-r from-[#ff00c8] to-[#9c27b0] text-white font-medium flex items-center justify-center space-x-2 group hover:shadow-[0_0_15px_rgba(255,0,200,0.5)] transition-all duration-300 w-full">
             <span>Connect</span>
             <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />

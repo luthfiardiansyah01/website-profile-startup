@@ -1,5 +1,6 @@
 import React from 'react';
 import { Check, Shield, Zap, Target, TrendingUp, Users } from 'lucide-react';
+import { useLanguage } from '../../context/LanguageContext';
 
 interface PricingPackage {
   id: string;
@@ -14,6 +15,7 @@ interface PricingPackage {
 }
 
 const PricingSection = () => {
+  const { t } = useLanguage();
   const packages: PricingPackage[] = [
     {
       id: 'foundation',
@@ -116,12 +118,12 @@ const PricingSection = () => {
     <section id="pricing" className="py-20 relative">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <span className="text-[#ff00c8] uppercase tracking-wider text-sm font-medium">Investment Plans</span>
+          <span className="text-[#ff00c8] uppercase tracking-wider text-sm font-medium">{t('pricingLabel')}</span>
           <h2 className="text-3xl md:text-4xl font-bold mt-2 bg-gradient-to-r from-white to-white/80 text-transparent bg-clip-text">
-            Pricing & Services
+            {t('pricingTitle')}
           </h2>
           <p className="mt-4 text-white/70 max-w-2xl mx-auto">
-            Choose the perfect package to accelerate your organization's digital transformation and innovation goals.
+            {t('pricingDescription')}
           </p>
         </div>
 
@@ -137,9 +139,9 @@ const PricingSection = () => {
           <div className="flex items-start gap-4">
             <Shield className="w-6 h-6 text-[#00f0ff] flex-shrink-0 mt-1" />
             <div>
-              <h3 className="text-lg font-semibold mb-2">Government & Enterprise Packages</h3>
+              <h3 className="text-lg font-semibold mb-2">{t('pricingComplianceTitle')}</h3>
               <p className="text-white/70">
-                Packages marked with a government badge include compliance reporting, enterprise security standards, and dedicated support. Pricing is indicative and customizable based on specific requirements. Contact us for official quotations and tailored solutions.
+                {t('pricingComplianceDesc')}
               </p>
             </div>
           </div>
@@ -154,6 +156,8 @@ const PricingSection = () => {
 };
 
 const PricingCard = ({ package: pkg }: { package: PricingPackage }) => {
+  const { t } = useLanguage();
+
   const iconMap: { [key: string]: React.ReactNode } = {
     foundation: <Target className="w-6 h-6" />,
     automation: <Zap className="w-6 h-6" />,
@@ -172,13 +176,67 @@ const PricingCard = ({ package: pkg }: { package: PricingPackage }) => {
     partnership: 'from-pink-500 to-purple-500',
   };
 
+  const translationKeyMap: { [key: string]: { name: string; program: string; product: string; cta: string; deliverables: string[] } } = {
+    foundation: {
+      name: t('priceEnterprise'),
+      program: t('priceStartupProgram'),
+      product: t('priceFlagship'),
+      cta: t('requestConsultation'),
+      deliverables: [t('foundationDeliverable1'), t('foundationDeliverable2'), t('foundationDeliverable3'), t('foundationDeliverable4')],
+    },
+    automation: {
+      name: t('automationTitle'),
+      program: t('automationProgram'),
+      product: t('automationProduct'),
+      cta: t('requestConsultation'),
+      deliverables: [t('automationDeliverable1'), t('automationDeliverable2'), t('automationDeliverable3'), t('automationDeliverable4')],
+    },
+    learning: {
+      name: t('learningTitle'),
+      program: t('learningProgram'),
+      product: t('learningProduct'),
+      cta: t('requestConsultation'),
+      deliverables: [t('learningDeliverable1'), t('learningDeliverable2'), t('learningDeliverable3'), t('learningDeliverable4')],
+    },
+    climate: {
+      name: t('climateTitle'),
+      program: t('climateProgram'),
+      product: t('climateProduct'),
+      cta: t('requestQuotation'),
+      deliverables: [t('climateDeliverable1'), t('climateDeliverable2'), t('climateDeliverable3'), t('climateDeliverable4'), t('climateDeliverable5')],
+    },
+    flagship: {
+      name: t('flagshipTitle'),
+      program: t('flagshipProgram'),
+      product: t('flagshipProduct'),
+      cta: t('requestConsultation'),
+      deliverables: [t('flagshipDeliverable1'), t('flagshipDeliverable2'), t('flagshipDeliverable3'), t('flagshipDeliverable4'), t('flagshipDeliverable5')],
+    },
+    partnership: {
+      name: t('partnershipTitle'),
+      program: t('partnershipProgram'),
+      product: t('partnershipProduct'),
+      cta: t('requestQuotation'),
+      deliverables: [t('partnershipDeliverable1'), t('partnershipDeliverable2'), t('partnershipDeliverable3'), t('partnershipDeliverable4'), t('partnershipDeliverable5')],
+    },
+  };
+
+  const translated = translationKeyMap[pkg.id];
+  const marketTranslations = pkg.targetMarket.map(market => {
+    if (market === 'Enterprise') return t('enterprise');
+    if (market === 'Corporate') return t('corporate');
+    if (market === 'NGO') return t('ngo');
+    if (market === 'Government') return t('government');
+    return market;
+  });
+
   return (
     <div className="group relative bg-[#0a0a1f]/30 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden transition-all duration-300 hover:border-white/20 hover:shadow-[0_0_30px_rgba(0,240,255,0.1)]">
       {/* Government Badge */}
       {pkg.isGovernment && (
         <div className="absolute top-4 right-4 flex items-center gap-1 bg-orange-500/20 border border-orange-500/50 rounded-full px-3 py-1 z-10">
           <Shield size={14} className="text-orange-400" />
-          <span className="text-xs font-semibold text-orange-300">Government</span>
+          <span className="text-xs font-semibold text-orange-300">{t('governmentBadge')}</span>
         </div>
       )}
 
@@ -188,21 +246,21 @@ const PricingCard = ({ package: pkg }: { package: PricingPackage }) => {
           <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${colorMap[pkg.id]} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
             <span className="text-white">{iconMap[pkg.id]}</span>
           </div>
-          <h3 className="text-2xl font-bold text-white mb-2">{pkg.name}</h3>
-          <p className="text-[#00f0ff] text-sm font-medium">{pkg.startupProgram}</p>
+          <h3 className="text-2xl font-bold text-white mb-2">{translated.name}</h3>
+          <p className="text-[#00f0ff] text-sm font-medium">{translated.program}</p>
         </div>
 
         {/* Flagship Product */}
         <div className="mb-4 pb-4 border-b border-white/10">
-          <p className="text-white/60 text-xs uppercase tracking-wider mb-1">Flagship Product</p>
-          <p className="text-white font-medium">{pkg.flagshipProduct}</p>
+          <p className="text-white/60 text-xs uppercase tracking-wider mb-1">{t('priceFlagship')}</p>
+          <p className="text-white font-medium">{translated.product}</p>
         </div>
 
         {/* Target Market */}
         <div className="mb-6">
-          <p className="text-white/60 text-xs uppercase tracking-wider mb-2">Target Market</p>
+          <p className="text-white/60 text-xs uppercase tracking-wider mb-2">{t('priceTargetMarket')}</p>
           <div className="flex flex-wrap gap-2">
-            {pkg.targetMarket.map((market) => (
+            {marketTranslations.map((market) => (
               <span key={market} className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-white/80">
                 {market}
               </span>
@@ -212,9 +270,9 @@ const PricingCard = ({ package: pkg }: { package: PricingPackage }) => {
 
         {/* Deliverables */}
         <div className="mb-6">
-          <p className="text-white/60 text-xs uppercase tracking-wider mb-3">Key Deliverables</p>
+          <p className="text-white/60 text-xs uppercase tracking-wider mb-3">{t('priceKeyDeliverables')}</p>
           <ul className="space-y-2">
-            {pkg.deliverables.map((item, idx) => (
+            {translated.deliverables.map((item, idx) => (
               <li key={idx} className="flex items-start gap-2">
                 <Check size={16} className="text-[#00f0ff] flex-shrink-0 mt-0.5" />
                 <span className="text-white/80 text-sm">{item}</span>
@@ -225,13 +283,13 @@ const PricingCard = ({ package: pkg }: { package: PricingPackage }) => {
 
         {/* Pricing */}
         <div className="mb-6 p-4 bg-white/5 border border-white/10 rounded-lg">
-          <p className="text-white/60 text-xs uppercase tracking-wider mb-1">Pricing Range</p>
+          <p className="text-white/60 text-xs uppercase tracking-wider mb-1">{t('pricingRange')}</p>
           <p className="text-white font-semibold text-lg">{pkg.pricingRange}</p>
         </div>
 
         {/* CTA Button */}
         <button className="w-full py-3 px-4 rounded-lg bg-gradient-to-r from-[#00f0ff] to-[#00f0ff]/70 text-[#0a0a1f] font-semibold hover:shadow-[0_0_20px_rgba(0,240,255,0.5)] transition-all duration-300 group/btn">
-          {pkg.cta}
+          {translated.cta}
         </button>
       </div>
     </div>

@@ -1,8 +1,10 @@
 import React from 'react';
 import { CircleDollarSign, ExternalLink, Users } from 'lucide-react';
 import DonationButton from '../ui/DonationButton';
+import { useLanguage } from '../../context/LanguageContext';
 
 const SponsorSection = () => {
+  const { t } = useLanguage();
   const sponsors = [
     {
       id: 1,
@@ -59,12 +61,12 @@ const SponsorSection = () => {
     <section id="sponsors" className="py-20 relative">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <span className="text-[#9c27b0] uppercase tracking-wider text-sm font-medium">Our Partnership</span>
+          <span className="text-[#9c27b0] uppercase tracking-wider text-sm font-medium">{t('sponsorsLabel')}</span>
           <h2 className="text-3xl md:text-4xl font-bold mt-2 bg-gradient-to-r from-white to-white/80 text-transparent bg-clip-text">
-            Partners in Innovation
+            {t('sponsorsTitle')}
           </h2>
           <p className="mt-4 text-white/70 max-w-2xl mx-auto">
-            Meet the visionary organizations that partner with our mission to accelerate startup success.
+            {t('sponsorsDescription')}
           </p>
         </div>
 
@@ -81,13 +83,13 @@ const SponsorSection = () => {
             <div className="relative z-10">
               <div className="mb-6 flex items-center">
                 <CircleDollarSign className="w-8 h-8 text-[#00f0ff] mr-3" />
-                <h3 className="text-2xl font-semibold">Become a Partner</h3>
+                <h3 className="text-2xl font-semibold">{t('becomeSponsor')}</h3>
               </div>
 
               <p className="text-white/70 mb-6">
                 Join our network of forward-thinking organizations partnering for innovation and growth with the next generation of startups.
               </p>
-              
+
               <div className="space-y-4 mb-8">
                 <div className="flex items-start">
                   <div className="w-5 h-5 rounded-full bg-[#00f0ff]/20 flex items-center justify-center mt-1 mr-3">
@@ -108,7 +110,7 @@ const SponsorSection = () => {
                   <p className="text-white/80">Opportunities to mentor and collaborate with founders</p>
                 </div>
               </div>
-              
+
               <a
                 href="https://forms.google.com"
                 target="_blank"
@@ -119,22 +121,22 @@ const SponsorSection = () => {
                 <ExternalLink size={16} />
               </a>
             </div>
-            
+
             {/* Background Decoration */}
             <div className="absolute -bottom-20 -right-20 w-60 h-60 bg-[#00f0ff]/20 blur-[80px] rounded-full opacity-30 group-hover:opacity-60 transition-opacity duration-500"></div>
           </div>
-          
+
           <div className="bg-[#0a0a1f]/30 backdrop-blur-sm border border-white/10 rounded-xl p-8 relative overflow-hidden group">
             <div className="relative z-10">
               <div className="mb-6 flex items-center">
                 <Users className="w-8 h-8 text-[#ff00c8] mr-3" />
-                <h3 className="text-2xl font-semibold">Support Our Mission</h3>
+                <h3 className="text-2xl font-semibold">{t('donate')}</h3>
               </div>
-              
+
               <p className="text-white/70 mb-6">
                 Your contribution helps us empower the next generation of innovators and create lasting impact through our programs.
               </p>
-              
+
               <div className="space-y-4 mb-8">
                 <div className="flex items-start">
                   <div className="w-5 h-5 rounded-full bg-[#ff00c8]/20 flex items-center justify-center mt-1 mr-3">
@@ -155,10 +157,10 @@ const SponsorSection = () => {
                   <p className="text-white/80">Help expand our reach to emerging markets</p>
                 </div>
               </div>
-              
+
               <DonationButton />
             </div>
-            
+
             {/* Background Decoration */}
             <div className="absolute -bottom-20 -right-20 w-60 h-60 bg-[#ff00c8]/20 blur-[80px] rounded-full opacity-30 group-hover:opacity-60 transition-opacity duration-500"></div>
           </div>

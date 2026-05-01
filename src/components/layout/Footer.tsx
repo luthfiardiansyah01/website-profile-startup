@@ -1,8 +1,10 @@
 import React from 'react';
 import { GanttChartSquare, Twitter, Linkedin, Github, Mail, ArrowRight } from 'lucide-react';
 import startupIcon from '@/assets/startup-transparan-2.png'
+import { useLanguage } from '../../context/LanguageContext';
 
 const Footer = () => {
+  const { t } = useLanguage();
   return (
     <footer className="relative mt-20 border-t border-white/10 overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#00f0ff]/50 to-transparent"></div>
@@ -30,18 +32,18 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
             <ul className="space-y-3">
-              <FooterLink text="About Us" />
-              <FooterLink text="Programs" />
-              <FooterLink text="Pricing" href="#pricing" />
-              <FooterLink text="Become a Partner" href="https://forms.google.com" />
-              <FooterLink text="Join Our Network" />
+              <FooterLink text={t('footerAbout')} />
+              <FooterLink text={t('footerPrograms')} />
+              <FooterLink text={t('footerPricing')} href="#pricing" />
+              <FooterLink text={t('becomeSponsor')} href="https://forms.google.com" />
+              <FooterLink text={t('footerContact')} />
             </ul>
           </div>
           
           <div>
             <h3 className="text-lg font-semibold mb-6">Subscribe</h3>
             <p className="text-white/70 mb-4">
-              Stay updated with our latest news and programs.
+              {t('donate')}
             </p>
             <div className="flex">
               <input
@@ -58,14 +60,14 @@ const Footer = () => {
         
         <div className="mt-12 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center">
           <p className="text-white/50 text-sm">
-            © 2025 MoedaTrace. All rights reserved.
+            © 2025 MoedaTrace. {t('footerCopyright')}
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <span className="text-white/50 text-sm hover:text-white/80 transition-colors cursor-pointer">
-              Privacy Policy
+              {t('footerPrivacy')}
             </span>
             <span className="text-white/50 text-sm hover:text-white/80 transition-colors cursor-pointer">
-              Terms of Service
+              {t('footerTerms')}
             </span>
           </div>
         </div>

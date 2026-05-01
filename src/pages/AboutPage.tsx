@@ -1,16 +1,19 @@
 import React from 'react';
 import { Target, Lightbulb, TrendingUp, Zap } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 const AboutPage = () => {
+  const { t } = useLanguage();
+
   return (
     <div className="min-h-screen pt-24 pb-20">
       {/* Vision & Mission Section */}
       <section className="py-20 relative">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <span className="text-[#9c27b0] uppercase tracking-wider text-sm font-medium">Who We Are</span>
+            <span className="text-[#9c27b0] uppercase tracking-wider text-sm font-medium">{t('aboutLabel')}</span>
             <h1 className="text-4xl md:text-5xl font-bold mt-4 bg-gradient-to-r from-white to-white/80 text-transparent bg-clip-text">
-              Vision & Mission
+              {t('aboutTitle')}
             </h1>
           </div>
 
@@ -22,11 +25,11 @@ const AboutPage = () => {
               <div className="relative z-10">
                 <div className="mb-6 flex items-center">
                   <Target className="w-8 h-8 text-[#00f0ff] mr-3" />
-                  <h2 className="text-2xl font-semibold">Vision</h2>
+                  <h2 className="text-2xl font-semibold">{t('visionTitle')}</h2>
                 </div>
 
                 <p className="text-lg text-white/80 leading-relaxed">
-                  Build AI-powered infrastructure for productive, resilient, and sustainable ecosystems
+                  {t('visionDesc')}
                 </p>
               </div>
             </div>
@@ -38,13 +41,13 @@ const AboutPage = () => {
               <div className="relative z-10">
                 <div className="mb-6 flex items-center">
                   <Lightbulb className="w-8 h-8 text-[#ff00c8] mr-3" />
-                  <h2 className="text-2xl font-semibold">Mission</h2>
+                  <h2 className="text-2xl font-semibold">{t('missionTitle')}</h2>
                 </div>
 
                 <ol className="space-y-4">
-                  <MissionItem icon={<Zap size={18} />} text="Improve productivity using AI-driven insights" />
-                  <MissionItem icon={<TrendingUp size={18} />} text="Enable efficient and sustainable business operations" />
-                  <MissionItem icon={<Lightbulb size={18} />} text="Connect learning, data, and economic opportunities" />
+                  <MissionItem icon={<Zap size={18} />} text={t('missionItem1')} />
+                  <MissionItem icon={<TrendingUp size={18} />} text={t('missionItem2')} />
+                  <MissionItem icon={<Lightbulb size={18} />} text={t('missionItem3')} />
                 </ol>
               </div>
             </div>
