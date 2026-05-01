@@ -8,7 +8,8 @@ export const translations = {
     donate: 'Donate',
 
     // Hero Section
-    heroTitle: 'Pioneering The Future of Innovations',
+    heroTitle: 'Pioneering The',
+    hero2Title: 'Future of Innovations'
     heroSubtitle: 'Accelerating innovation through AI-powered infrastructure for startups and enterprises',
     heroGetStarted: 'Get Started',
     heroLearnMore: 'Learn More',
