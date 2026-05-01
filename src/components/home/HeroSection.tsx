@@ -52,7 +52,7 @@ const HeroSection = () => {
         </h1>
         
         <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto mb-10 leading-relaxed">
-          We Build AI-powered infrastructure for productive, resilient, and sustainable ecosystems
+          We accelerate visionary startups through cutting-edge programs, sustainable growth strategies, and a global network of innovators.
         </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
