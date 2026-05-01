@@ -9,7 +9,7 @@ export const translations = {
 
     // Hero Section
     heroTitle: 'Pioneering The',
-    hero2Title: 'Future of Innovations'
+    hero2Title: 'Future of Innovations',
     heroSubtitle: 'Accelerating innovation through AI-powered infrastructure for startups and enterprises',
     heroGetStarted: 'Get Started',
     heroLearnMore: 'Learn More',
