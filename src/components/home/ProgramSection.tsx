@@ -4,7 +4,7 @@ import ProgramCard from '../ui/ProgramCard';
 import { useLanguage } from '../../context/LanguageContext';
 
 const ProgramSection = () => {
-  const [activeTab, setActiveTab] = useState('social');
+  const [activeTab, setActiveTab] = useState('industry');
   const { t } = useLanguage();
 
   const socialPrograms = [
