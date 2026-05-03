@@ -127,7 +127,7 @@ const ProgramSection = () => {
               Sustainable Industry
             </button>
             <button
-              onClick={() => setActiveTab('climate')}
+              onClick={() => setActiveTab('climate')}  
               className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                 activeTab === 'business'
                   ? 'bg-gradient-to-r from-[#ff00c8] to-[#ff00c8]/70 text-white shadow-[0_0_10px_rgba(255,0,200,0.4)]'
@@ -151,9 +151,9 @@ const ProgramSection = () => {
 
         {/* Program Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {(activeTab === 'social' ? socialPrograms : businessPrograms).map((program) => (
+          {{getPrograms().map((program) => (
             <ProgramCard key={program.id} program={program} />
-          ))}
+          ))}}
         </div>
 
         {/* View All Link */}
