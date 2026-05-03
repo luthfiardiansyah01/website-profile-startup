@@ -87,6 +87,19 @@ const ProgramSection = () => {
     }
   ];
 
+  const getPrograms = () => {
+    switch(activeTab) {
+      case 'industry':
+        return industryPrograms;
+      case 'climate':
+        return climatePrograms;
+      case 'ai':
+        return aiPrograms;
+      default:
+        return industryPrograms;
+    }
+  };
+
   return (
     <section id="programs" className="py-20 relative">
       <div className="container mx-auto px-4">
