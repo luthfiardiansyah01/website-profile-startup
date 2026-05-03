@@ -151,7 +151,7 @@ const ProgramSection = () => {
 
         {/* Program Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {{getPrograms().map((program) => (
+          {getPrograms().map((program) => (
             <ProgramCard key={program.id} program={program} />
           ))}
         </div>
