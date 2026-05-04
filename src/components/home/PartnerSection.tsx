@@ -201,4 +201,4 @@ const PartnerCard = ({ partner }: { partner: Partner }) => {
   );
 };
 
-export default PartnershipSection;
+export default PartnerSection;
