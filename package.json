@@ -13,8 +13,6 @@
     "sync:translations": "node scripts/syncTranslations.js"
   },
   "dependencies": {
-    "baseline-browser-mapping": "^2.10.27",
-    "caniuse-lite": "^1.0.30001791",
     "lucide-react": "^0.344.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
