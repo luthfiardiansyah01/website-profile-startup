@@ -8,7 +8,7 @@ type Partner = {
   tier: string;
 };
 
-const PartnershipSection: React.FC = () => {
+const PartnerSection: React.FC = () => {
 
   const partners: Partner[] = [
     {
