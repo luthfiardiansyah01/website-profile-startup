@@ -10,7 +10,7 @@ const HomePage = () => {
       <HeroSection />
       <ProgramSection />
       <PricingSection />
-      <PartnershipSection />
+      <PartnerSection />
     </>
   );
 };
