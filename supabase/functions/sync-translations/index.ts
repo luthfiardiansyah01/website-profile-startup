@@ -140,6 +140,9 @@ Deno.serve(async (req: Request) => {
     const supabaseUrl = Deno.env.get("SUPABASE_URL");
     const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
 
+    console.log("URL:", supabaseUrl);
+    console.log("KEY:", supabaseKey);
+
     if (!supabaseUrl || !supabaseKey) {
       return new Response(
         JSON.stringify({ error: "Supabase configuration missing" }),
