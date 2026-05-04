@@ -28,17 +28,17 @@ export interface ProgramCardProps {
 }
 
 // Sponsors
-export type SponsorTier = 'Platinum' | 'Gold' | 'Silver' | 'Bronze';
+export type PartnerTier = 'Platinum' | 'Gold' | 'Silver' | 'Bronze';
 
-export interface Sponsor {
+export interface Partner {
   id: number;
   name: string;
   logo: string;
   tier: SponsorTier;
 }
 
-export interface SponsorCardProps {
-  sponsor: Sponsor;
+export interface PartnerCardProps {
+  partner: Partner;
 }
 
 // UI Components
