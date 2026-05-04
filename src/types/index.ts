@@ -27,14 +27,14 @@ export interface ProgramCardProps {
   program: Program;
 }
 
-// Sponsors
+// Partner
 export type PartnerTier = 'Platinum' | 'Gold' | 'Silver' | 'Bronze';
 
 export interface Partner {
   id: number;
   name: string;
   logo: string;
-  tier: SponsorTier;
+  tier: PartnerTier;
 }
 
 export interface PartnerCardProps {
