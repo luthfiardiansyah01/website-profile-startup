@@ -35,7 +35,7 @@ const Footer = () => {
               <FooterLink text={t('footerAbout')} />
               <FooterLink text={t('footerPrograms')} />
               <FooterLink text={t('footerPricing')} href="#pricing" />
-              <FooterLink text={t('becomeSponsor')} href="https://forms.google.com" />
+              <FooterLink text={t('becomePartner')} href="https://forms.google.com" />
               <FooterLink text={t('footerContact')} />
             </ul>
           </div>
