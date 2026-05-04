@@ -1,11 +1,16 @@
 import React from 'react';
 import { CircleDollarSign, ExternalLink, Users } from 'lucide-react';
-import { useLanguage } from '../../context/LanguageContext';
 
-const PartnershipSection = () => {
-  const { t } = useLanguage();
+type Partner = {
+  id: number;
+  name: string;
+  logo: string;
+  tier: string;
+};
 
-  const partners = [
+const PartnershipSection: React.FC = () => {
+
+  const partners: Partner[] = [
     {
       id: 1,
       name: 'Orpiment Coffee',
@@ -57,7 +62,7 @@ const PartnershipSection = () => {
   ];
 
   return (
-    <section id="partners" className="py-20 relative">
+    <section id="partners" className="py-20 relative bg-[#0a0a1f] text-white">
       <div className="container mx-auto px-4">
 
         {/* Header */}
@@ -80,79 +85,79 @@ const PartnershipSection = () => {
           ))}
         </div>
 
-        {/* Partnership & Collaboration Section */}
+        {/* Bottom Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-16">
 
           {/* LEFT CARD */}
-          <div className="bg-[#0a0a1f]/30 backdrop-blur-sm border border-white/10 rounded-xl p-8 relative overflow-hidden group">
-            <div className="relative z-10">
-              <div className="mb-6 flex items-center">
-                <CircleDollarSign className="w-8 h-8 text-[#00f0ff] mr-3" />
-                <h3 className="text-2xl font-semibold">Enterprise Partnership</h3>
-              </div>
-
-              <p className="text-white/70 mb-6">
-                Collaborate with MoedaTrace to design and deploy AI-powered intelligence systems across your organization and ecosystem.
-              </p>
-
-              <div className="space-y-4 mb-8">
-                <div className="flex items-start">
-                  <div className="dot-cyan" />
-                  <p className="text-white/80">Co-develop enterprise intelligence systems</p>
-                </div>
-                <div className="flex items-start">
-                  <div className="dot-cyan" />
-                  <p className="text-white/80">Access integrated data & AI infrastructure</p>
-                </div>
-                <div className="flex items-start">
-                  <div className="dot-cyan" />
-                  <p className="text-white/80">Drive innovation across industry and sustainability initiatives</p>
-                </div>
-              </div>
-
-              <a
-                href="https://forms.google.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-cyan"
-              >
-                <span>Become a Partner</span>
-                <ExternalLink size={16} />
-              </a>
+          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 relative overflow-hidden group">
+            <div className="mb-6 flex items-center">
+              <CircleDollarSign className="w-8 h-8 text-[#00f0ff] mr-3" />
+              <h3 className="text-2xl font-semibold">Enterprise Partnership</h3>
             </div>
+
+            <p className="text-white/70 mb-6">
+              Collaborate with MoedaTrace to design and deploy AI-powered intelligence systems across your organization and ecosystem.
+            </p>
+
+            <div className="space-y-4 mb-8">
+
+              {[ 
+                "Co-develop enterprise intelligence systems",
+                "Access integrated data & AI infrastructure",
+                "Drive innovation across industry and sustainability initiatives"
+              ].map((text, i) => (
+                <div key={i} className="flex items-start">
+                  <div className="w-5 h-5 rounded-full bg-[#00f0ff]/20 flex items-center justify-center mt-1 mr-3">
+                    <div className="w-2 h-2 rounded-full bg-[#00f0ff]" />
+                  </div>
+                  <p className="text-white/80">{text}</p>
+                </div>
+              ))}
+
+            </div>
+
+            <a
+              href="https://forms.google.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 rounded-full bg-gradient-to-r from-[#00f0ff] to-[#00f0ff]/70 text-[#0a0a1f] font-medium inline-flex items-center gap-2 hover:shadow-[0_0_15px_rgba(0,240,255,0.5)] transition-all duration-300"
+            >
+              <span>Become a Partner</span>
+              <ExternalLink size={16} />
+            </a>
           </div>
 
           {/* RIGHT CARD */}
-          <div className="bg-[#0a0a1f]/30 backdrop-blur-sm border border-white/10 rounded-xl p-8 relative overflow-hidden group">
-            <div className="relative z-10">
-              <div className="mb-6 flex items-center">
-                <Users className="w-8 h-8 text-[#ff00c8] mr-3" />
-                <h3 className="text-2xl font-semibold">Strategic Collaboration</h3>
-              </div>
-
-              <p className="text-white/70 mb-6">
-                Work with us on high-impact initiatives across climate, industry, and digital transformation programs.
-              </p>
-
-              <div className="space-y-4 mb-8">
-                <div className="flex items-start">
-                  <div className="dot-pink" />
-                  <p className="text-white/80">Joint innovation & pilot projects</p>
-                </div>
-                <div className="flex items-start">
-                  <div className="dot-pink" />
-                  <p className="text-white/80">Industry & government collaboration programs</p>
-                </div>
-                <div className="flex items-start">
-                  <div className="dot-pink" />
-                  <p className="text-white/80">Expansion into new markets and ecosystems</p>
-                </div>
-              </div>
-
-              <button className="btn-pink">
-                Explore Collaboration
-              </button>
+          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 relative overflow-hidden group">
+            <div className="mb-6 flex items-center">
+              <Users className="w-8 h-8 text-[#ff00c8] mr-3" />
+              <h3 className="text-2xl font-semibold">Strategic Collaboration</h3>
             </div>
+
+            <p className="text-white/70 mb-6">
+              Work with us on high-impact initiatives across climate, industry, and digital transformation programs.
+            </p>
+
+            <div className="space-y-4 mb-8">
+
+              {[
+                "Joint innovation & pilot projects",
+                "Industry & government collaboration programs",
+                "Expansion into new markets and ecosystems"
+              ].map((text, i) => (
+                <div key={i} className="flex items-start">
+                  <div className="w-5 h-5 rounded-full bg-[#ff00c8]/20 flex items-center justify-center mt-1 mr-3">
+                    <div className="w-2 h-2 rounded-full bg-[#ff00c8]" />
+                  </div>
+                  <p className="text-white/80">{text}</p>
+                </div>
+              ))}
+
+            </div>
+
+            <button className="px-6 py-3 rounded-full bg-gradient-to-r from-[#ff00c8] to-[#ff00c8]/70 text-white font-medium hover:shadow-[0_0_15px_rgba(255,0,200,0.5)] transition-all duration-300">
+              Explore Collaboration
+            </button>
           </div>
 
         </div>
@@ -161,7 +166,8 @@ const PartnershipSection = () => {
   );
 };
 
-const PartnerCard = ({ partner }) => {
+const PartnerCard = ({ partner }: { partner: Partner }) => {
+
   const tierBadgeColor = {
     'Strategic Partner': 'bg-gradient-to-r from-cyan-400 to-blue-500',
     'Core Partner': 'bg-gradient-to-r from-purple-400 to-fuchsia-500',
@@ -171,13 +177,18 @@ const PartnerCard = ({ partner }) => {
 
   return (
     <div className="group relative rounded-lg overflow-hidden backdrop-blur-sm transition-all duration-300 hover:shadow-[0_0_25px_rgba(156,39,176,0.15)]">
+      
       <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-white/5 to-white/10 p-px">
         <div className="absolute inset-0 rounded-lg bg-[#0a0a1f]/50 backdrop-blur-sm"></div>
       </div>
 
       <div className="relative p-4 flex flex-col items-center">
         <div className="w-16 h-16 rounded-full overflow-hidden mb-3 bg-white/5 p-1">
-          <img src={partner.logo} alt={partner.name} className="w-full h-full object-cover rounded-full filter grayscale group-hover:filter-none transition-all duration-300" />
+          <img
+            src={partner.logo}
+            alt={partner.name}
+            className="w-full h-full object-cover rounded-full filter grayscale group-hover:grayscale-0 transition-all duration-300"
+          />
         </div>
 
         <h4 className="text-sm font-medium text-center">{partner.name}</h4>
