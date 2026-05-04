@@ -7,59 +7,98 @@ const ProgramSection = () => {
   const [activeTab, setActiveTab] = useState('industry');
   const { t } = useLanguage();
 
-  const socialPrograms = [
+  const industryPrograms = [
     {
       id: 1,
-      title: "Community Impact Initiative",
-      description: "Empowering startups focused on social good with mentorship, resources, and networking opportunities.",
-      icon: <Users className="w-6 h-6" />,
-      stats: "50+ ventures supported",
-      color: "from-[#00f0ff] to-[#2563eb]"
-    },
-    {
-      id: 2,
-      title: "Green Innovation Lab",
-      description: "Accelerating eco-friendly startups addressing climate change and environmental sustainability.",
+      title: "Circular Economy Platform",
+      description: "Digital infrastructure for reuse, recycling, and circular supply chain optimization.",
       icon: <Globe className="w-6 h-6" />,
-      stats: "37% reduction in carbon footprint",
+      stats: "Up to 30% waste reduction",
       color: "from-[#00f0ff] to-[#059669]"
     },
     {
+      id: 2,
+      title: "Smart Waste Tracking System",
+      description: "Real-time tracking of production waste across operations and supply chains.",
+      icon: <Building className="w-6 h-6" />,
+      stats: "Full visibility across operations",
+      color: "from-[#00f0ff] to-[#2563eb]"
+    },
+    {
       id: 3,
-      title: "Education Technology Hub",
-      description: "Supporting startups revolutionizing learning experiences through cutting-edge technology.",
+      title: "AI Material Optimization",
+      description: "AI-driven recommendations to reduce material usage and improve production efficiency.",
       icon: <Lightbulb className="w-6 h-6" />,
-      stats: "100K+ students impacted",
+      stats: "20–40% efficiency gain",
       color: "from-[#ff00c8] to-[#9c27b0]"
     }
   ];
 
-  const businessPrograms = [
+  const climatePrograms = [
     {
       id: 4,
-      title: "Accelerator Pro",
-      description: "A 12-week intensive program helping startups scale rapidly with expert mentorship and funding opportunities.",
-      icon: <Rocket className="w-6 h-6" />,
-      stats: "$25M+ raised by graduates",
-      color: "from-[#ff00c8] to-[#9c27b0]"
+      title: "Climate Risk Intelligence",
+      description: "AI-powered risk mapping and environmental prediction system.",
+      icon: <Target className="w-6 h-6" />,
+      stats: "Real-time risk visibility",
+      color: "from-[#00f0ff] to-[#3b82f6]"
     },
     {
       id: 5,
-      title: "Corporate Innovation Partnership",
-      description: "Connecting startups with industry leaders for collaborative innovation and market expansion.",
-      icon: <Building className="w-6 h-6" />,
-      stats: "35+ corporate partnerships",
-      color: "from-[#9c27b0] to-[#6d28d9]"
+      title: "Early Warning System",
+      description: "Mobile-based alert system for disaster and environmental risk monitoring.",
+      icon: <Rocket className="w-6 h-6" />,
+      stats: "Faster response time",
+      color: "from-[#ff00c8] to-[#9c27b0]"
     },
     {
       id: 6,
-      title: "Global Founder Network",
-      description: "A global community of founders sharing insights, resources, and opportunities across borders.",
+      title: "Carbon & Waste Analytics",
+      description: "Enterprise dashboard for ESG tracking and compliance reporting.",
       icon: <Award className="w-6 h-6" />,
-      stats: "1,200+ founders across 60 countries",
+      stats: "Compliance-ready insights",
+      color: "from-[#00f0ff] to-[#2563eb]"
+    }
+  ];
+  const aiPrograms = [
+    {
+      id: 7,
+      title: "AI Recommendation Engine",
+      description: "Core intelligence system delivering real-time recommendations across all operations.",
+      icon: <Lightbulb className="w-6 h-6" />,
+      stats: "Decision automation",
+      color: "from-[#ff00c8] to-[#9c27b0]"
+    },
+    {
+      id: 8,
+      title: "Data Analytics Engine",
+      description: "Unified data processing and analytics layer for enterprise decision-making.",
+      icon: <Building className="w-6 h-6" />,
+      stats: "Single source of truth",
+      color: "from-[#00f0ff] to-[#2563eb]"
+    },
+    {
+      id: 9,
+      title: "Integration & API Layer",
+      description: "Seamless integration with ERP, IoT, and existing enterprise systems.",
+      icon: <Rocket className="w-6 h-6" />,
+      stats: "Enterprise-ready deployment",
       color: "from-[#00f0ff] to-[#3b82f6]"
     }
   ];
+
+  const getPrograms = () => {
+    switch(activeTab) {
+      case 'industry':
+        return industryPrograms;
+      case 'climate':
+        return climatePrograms;
+      case 'ai':
+        return aiPrograms;
+      default:
+        return industryPrograms;
+    }
+  };
 
   return (
     <section id="programs" className="py-20 relative">
