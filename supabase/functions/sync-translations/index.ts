@@ -33,7 +33,8 @@ function flattenTranslations(obj: any, prefix = ""): Record<string, string> {
 
 async function syncTranslationsData(
   supabase: any,
-  translationsData: TranslationsData
+  translationsData: TranslationsData,
+  userId?: string
 ): Promise<{
   keysCreated: number;
   keysUpdated: number;
@@ -89,6 +90,7 @@ async function syncTranslationsData(
             translated_text: indonesianFlat[key],
             is_synced: true,
             last_synced_at: new Date(),
+            created_by: userId,
           });
           translationsCreated++;
         }
@@ -96,7 +98,7 @@ async function syncTranslationsData(
     } else {
       const { data: newKey } = await supabase
         .from("translation_keys")
-        .insert({ key, english_text: value, category, status: "active" })
+        .insert({ key, english_text: value, category, status: "active", created_by: userId })
         .select("id")
         .single();
 
@@ -110,6 +112,7 @@ async function syncTranslationsData(
             translated_text: indonesianFlat[key],
             is_synced: true,
             last_synced_at: new Date(),
+            created_by: userId,
           });
           translationsCreated++;
         }
@@ -150,6 +153,19 @@ Deno.serve(async (req: Request) => {
     const supabase = createClient(supabaseUrl, supabaseKey);
 
     if (req.method === "POST") {
+      const authHeader = req.headers.get("authorization");
+      let userId: string | undefined;
+
+      if (authHeader) {
+        try {
+          const token = authHeader.replace("Bearer ", "");
+          const jwtPayload = JSON.parse(atob(token.split(".")[1]));
+          userId = jwtPayload.sub;
+        } catch {
+          // Continue without user ID if JWT parsing fails
+        }
+      }
+
       const body = await req.json();
       const { translations } = body;
 
@@ -163,7 +179,7 @@ Deno.serve(async (req: Request) => {
         );
       }
 
-      const result = await syncTranslationsData(supabase, translations);
+      const result = await syncTranslationsData(supabase, translations, userId);
 
       return new Response(JSON.stringify({ success: true, ...result }), {
         status: 200,

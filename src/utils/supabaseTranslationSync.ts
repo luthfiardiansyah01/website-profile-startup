@@ -15,7 +15,7 @@ export interface SyncResult {
   errors: string[];
 }
 
-export async function syncTranslationsToSupabase(): Promise<SyncResult> {
+export async function syncTranslationsToSupabase(userId?: string): Promise<SyncResult> {
   if (!supabaseUrl || !supabaseKey) {
     return {
       success: false,
@@ -28,7 +28,11 @@ export async function syncTranslationsToSupabase(): Promise<SyncResult> {
     };
   }
 
-  const supabase = createClient(supabaseUrl, supabaseKey);
+  const supabase = createClient(supabaseUrl, supabaseKey, {
+    auth: {
+      persistSession: false,
+    },
+  });
   const result: SyncResult = {
     success: true,
     keysCreated: 0,
@@ -75,6 +79,7 @@ export async function syncTranslationsToSupabase(): Promise<SyncResult> {
           english_text: value,
           category,
           status: 'active',
+          created_by: userId,
         });
 
         if (insertError) {
@@ -130,6 +135,7 @@ export async function syncTranslationsToSupabase(): Promise<SyncResult> {
             translated_text: indonesianFlat[key],
             is_synced: true,
             last_synced_at: new Date(),
+            created_by: userId,
           });
 
           if (insertError) {
@@ -149,6 +155,7 @@ export async function syncTranslationsToSupabase(): Promise<SyncResult> {
           report_type: report.type,
           details: report.details,
           severity: report.severity,
+          created_by: userId,
         });
 
         if (!reportError) {
