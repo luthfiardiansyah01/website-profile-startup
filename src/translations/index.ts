@@ -106,7 +106,7 @@ export const translations = {
     partnerLabel: 'Strategic Partners',
     partnerTitle: 'Our Partnership Ecosystem',
     partnerDescription: 'We collaborate with enterprises, institutions, and public sector organizations to build scalable intelligence systems and drive sustainable transformation.',
-    becomePartner: 'Become a Sponsor',
+    becomePartner: 'Become a Partner',
 
     // Footer
     footerAbout: 'About Us',
