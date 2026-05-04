@@ -55,7 +55,7 @@ export interface MetricCardProps {
 }
 
 export interface TierBadgeProps {
-  tier: SponsorTier;
+  tier: PartnerTier;
 }
 
 export interface StatisticCardProps {
