@@ -4,7 +4,7 @@ export const translations = {
     about: 'About',
     programs: 'Programs',
     pricing: 'Pricing',
-    sponsors: 'Sponsors',
+    partner: 'Partner',
     donate: 'Donate',
 
     // Hero Section
@@ -102,11 +102,11 @@ export const translations = {
     pricingComplianceTitle: 'Government & Enterprise Packages',
     pricingComplianceDesc: 'Packages marked with a government badge include compliance reporting, enterprise security standards, and dedicated support. Pricing is indicative and customizable based on specific requirements. Contact us for official quotations and tailored solutions.',
 
-    // Sponsors Section
-    sponsorsLabel: 'Partners & Supporters',
-    sponsorsTitle: 'Our Sponsors',
-    sponsorsDescription: 'Supported by leading organizations committed to innovation and sustainability',
-    becomeSponsor: 'Become a Sponsor',
+    // Partner Section
+    partnerLabel: 'Strategic Partners',
+    partnerTitle: 'Our Partnership Ecosystem',
+    partnerDescription: 'We collaborate with enterprises, institutions, and public sector organizations to build scalable intelligence systems and drive sustainable transformation.',
+    becomePartner: 'Become a Sponsor',
 
     // Footer
     footerAbout: 'About Us',
@@ -136,7 +136,7 @@ export const translations = {
     about: 'Tentang Kami',
     programs: 'Program',
     pricing: 'Harga',
-    sponsors: 'Sponsor',
+    partner: 'Partner',
     donate: 'Donasi',
 
     // Hero Section
@@ -234,11 +234,11 @@ export const translations = {
     pricingComplianceTitle: 'Paket Pemerintah & Perusahaan',
     pricingComplianceDesc: 'Paket yang ditandai dengan lencana pemerintah mencakup pelaporan kepatuhan, standar keamanan perusahaan, dan dukungan khusus. Harga bersifat indikatif dan dapat disesuaikan berdasarkan persyaratan spesifik. Hubungi kami untuk kutipan resmi dan solusi yang disesuaikan.',
 
-    // Sponsors Section
-    sponsorsLabel: 'Mitra & Pendukung',
-    sponsorsTitle: 'Sponsor Kami',
-    sponsorsDescription: 'Didukung oleh organisasi terkemuka yang berkomitmen pada inovasi dan keberlanjutan',
-    becomeSponsor: 'Jadilah Sponsor',
+    // Partner Section
+    partnerLabel: 'Mitra Strategis',
+    partnerTitle: 'Ekosistem Kemitraan Kami',
+    partnerDescription: 'Kami bekerja sama dengan perusahaan, lembaga, dan organisasi sektor publik untuk membangun sistem kecerdasan yang dapat diskalakan dan mendorong transformasi berkelanjutan',
+    becomePartner: 'Jadilah Mitra',
 
     // Footer
     footerAbout: 'Tentang Kami',
