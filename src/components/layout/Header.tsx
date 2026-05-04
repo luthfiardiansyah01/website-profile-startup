@@ -44,7 +44,7 @@ const Header = () => {
             <NavLink href="#about" icon={<Users size={18} />} text={t('about')} />
             <NavLink href="#programs" icon={<GanttChartSquare size={18} />} text={t('programs')} />
             <NavLink href="#pricing" icon={<BarChart3 size={18} />} text={t('pricing')} />
-            <NavLink href="#sponsors" icon={<HeartHandshake size={18} />} text={t('sponsors')} />
+            <NavLink href="#partner" icon={<HeartHandshake size={18} />} text={t('partner')} />
 
             {/* Language Switcher */}
             <div className="ml-4 flex items-center gap-2 bg-white/10 rounded-full p-1">
@@ -96,7 +96,7 @@ const Header = () => {
           <NavLink href="#about" icon={<Users size={18} />} text={t('about')} mobile />
           <NavLink href="#programs" icon={<GanttChartSquare size={18} />} text={t('programs')} mobile />
           <NavLink href="#pricing" icon={<BarChart3 size={18} />} text={t('pricing')} mobile />
-          <NavLink href="#sponsors" icon={<HeartHandshake size={18} />} text={t('sponsors')} mobile />
+          <NavLink href="#partner" icon={<HeartHandshake size={18} />} text={t('partner')} mobile />
 
           {/* Mobile Language Switcher */}
           <div className="flex items-center gap-2 bg-white/10 rounded-full p-1 w-full justify-center">
