@@ -1,5 +1,5 @@
 import React from 'react';
-import { CircleDollarSign, ExternalLink, Users } from 'lucide-react';
+import { ArrowRight, Briefcase, Globe, Building2 } from "lucide-react";
 
 type Partner = {
   id: number;
