@@ -2,7 +2,7 @@ import React from 'react';
 import HeroSection from '../components/home/HeroSection';
 import ProgramSection from '../components/home/ProgramSection';
 import PricingSection from '../components/home/PricingSection';
-import PartnerSection from '../components/home/PartnerSection';
+import PartnerSection from '../components/home/PartnershipSection';
 
 const HomePage = () => {
   return (
@@ -10,7 +10,7 @@ const HomePage = () => {
       <HeroSection />
       <ProgramSection />
       <PricingSection />
-      <PartnerSection />
+      <PartnershipSection />
     </>
   );
 };

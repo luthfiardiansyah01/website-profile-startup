@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Briefcase, Globe, Building2 } from "lucide-react";
+import { CircleDollarSign, ExternalLink, Users } from 'lucide-react';
 
 type Partner = {
   id: number;
@@ -8,7 +8,7 @@ type Partner = {
   tier: string;
 };
 
-const PartnerSection: React.FC = () => {
+const PartnershipSection: React.FC = () => {
 
   const partners: Partner[] = [
     {
@@ -201,4 +201,4 @@ const PartnerCard = ({ partner }: { partner: Partner }) => {
   );
 };
 
-export default PartnerSection;
+export default PartnershipSection;
