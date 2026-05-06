@@ -17,12 +17,12 @@ const Footer = () => {
             <div className="flex items-center gap-2 mb-6">
               <img src="/startup-transparan-2.png" alt="Startup Icon" className="h-15 w-20 animate-pulse" />
               <span className="text-xl font-bold bg-gradient-to-r from-[#00f0ff] to-[#ff00c8] text-transparent bg-clip-text">
-                MoedaTrace
+                {t("footer.company")}
               </span>
             </div>
 
             <p className="text-white/70 mb-6">
-              Reshaping the future of startup acceleration with innovative programs and sustainable growth strategies.
+              {t('footer.description')}
             </p>
 
             <div className="flex space-x-4">
@@ -37,11 +37,11 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
             <ul className="space-y-3">
-              <FooterLink text={t('footerAbout')} />
-              <FooterLink text={t('footerPrograms')} />
-              <FooterLink text={t('footerPricing')} href="#pricing" />
-              <FooterLink text={t('partner')} />
-              <FooterLink text={t('footerContact')} />
+              <FooterLink text={t('footer.about')} />
+              <FooterLink text={t('footer.programs')} />
+              <FooterLink text={t('footer.pricing')} href="#pricing" />
+              <FooterLink text={t('footer.partner')} />
+              <FooterLink text={t('footer.contact')} />
             </ul>
           </div>
 
@@ -49,7 +49,7 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-6">Subscribe</h3>
             <p className="text-white/70 mb-4">
-              {t('donate')}
+              {t('footer.donate')}
             </p>
 
             <div className="flex">
