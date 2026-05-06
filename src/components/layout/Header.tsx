@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ChevronRight, GanttChartSquare, Users, BarChart3, HeartHandshake, Globe } from 'lucide-react';
-import startupIcon from '@/assets/startup-transparan-2.png'
+<img src="/startup-transparan-2.png" />
 import NavLink from '../ui/NavLink';
-import { useLanguage } from '../../context/LanguageContext';
+import { useTranslation } from 'react-i18next';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { language, setLanguage, t } = useLanguage();
+  const { t, i18n } = useTranslation();
+  const language = i18n.language;
+  const setLanguage = (lang: string) => i18n.changeLanguage(lang);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,16 +26,15 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-        isScrolled
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${isScrolled
           ? 'bg-[#0a0a1f]/80 backdrop-blur-lg shadow-lg'
           : 'bg-transparent'
-      }`}
+        }`}
     >
       <div className="container mx-auto px-4 md:px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <img src="/startup-transparan-2.png" alt="Startup Icon" className="h-15 w-20 animate-pulse"/>
+            <img src="/startup-transparan-2.png" alt="Startup Icon" className="h-15 w-20 animate-pulse" />
             <span className="text-2xl font-bold bg-gradient-to-r from-[#00f0ff] to-[#ff00c8] text-transparent bg-clip-text">
               MoedaTrace
             </span>
@@ -50,21 +51,19 @@ const Header = () => {
             <div className="ml-4 flex items-center gap-2 bg-white/10 rounded-full p-1">
               <button
                 onClick={() => setLanguage('en')}
-                className={`px-3 py-1 rounded-full text-sm font-medium transition-all ${
-                  language === 'en'
+                className={`px-3 py-1 rounded-full text-sm font-medium transition-all ${language === 'en'
                     ? 'bg-gradient-to-r from-[#00f0ff] to-[#00f0ff]/70 text-[#0a0a1f]'
                     : 'text-white/70 hover:text-white'
-                }`}
+                  }`}
               >
                 EN
               </button>
               <button
                 onClick={() => setLanguage('id')}
-                className={`px-3 py-1 rounded-full text-sm font-medium transition-all ${
-                  language === 'id'
+                className={`px-3 py-1 rounded-full text-sm font-medium transition-all ${language === 'id'
                     ? 'bg-gradient-to-r from-[#00f0ff] to-[#00f0ff]/70 text-[#0a0a1f]'
                     : 'text-white/70 hover:text-white'
-                }`}
+                  }`}
               >
                 ID
               </button>
@@ -77,7 +76,7 @@ const Header = () => {
           </nav>
 
           {/* Mobile Menu Button */}
-          <button 
+          <button
             className="md:hidden text-white"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
@@ -88,9 +87,8 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       <nav
-        className={`md:hidden absolute w-full bg-[#0a0a1f]/95 backdrop-blur-lg transition-all duration-300 ease-in-out ${
-          mobileMenuOpen ? 'max-h-[420px] py-4 opacity-100' : 'max-h-0 py-0 opacity-0 overflow-hidden'
-        }`}
+        className={`md:hidden absolute w-full bg-[#0a0a1f]/95 backdrop-blur-lg transition-all duration-300 ease-in-out ${mobileMenuOpen ? 'max-h-[420px] py-4 opacity-100' : 'max-h-0 py-0 opacity-0 overflow-hidden'
+          }`}
       >
         <div className="container mx-auto px-4 flex flex-col space-y-3">
           <NavLink href="#about" icon={<Users size={18} />} text={t('about')} mobile />
@@ -102,21 +100,19 @@ const Header = () => {
           <div className="flex items-center gap-2 bg-white/10 rounded-full p-1 w-full justify-center">
             <button
               onClick={() => setLanguage('en')}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-                language === 'en'
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${language === 'en'
                   ? 'bg-gradient-to-r from-[#00f0ff] to-[#00f0ff]/70 text-[#0a0a1f]'
                   : 'text-white/70 hover:text-white'
-              }`}
+                }`}
             >
               EN
             </button>
             <button
               onClick={() => setLanguage('id')}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-                language === 'id'
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${language === 'id'
                   ? 'bg-gradient-to-r from-[#00f0ff] to-[#00f0ff]/70 text-[#0a0a1f]'
                   : 'text-white/70 hover:text-white'
-              }`}
+                }`}
             >
               ID
             </button>

@@ -1,0 +1,264 @@
+{
+    "about": "Tentang Kami",
+    "programs": "Program",
+    "pricing": "Harga",
+    "donate": "Donasi",
+    "partner": "Mitra",
+    "hero": {
+        "title": "Membentuk Inovasi Masa Depan",
+        "subtitle": "Mempercepat inovasi melalui infrastruktur berbasis AI untuk startup dan perusahaan",
+        "ctaPrimary": "Mulai Sekarang",
+        "ctaSecondary": "Pelajari Lebih Lanjut"
+    },
+    "price": {
+        "label": "Paket Investasi",
+        "title": "Harga & Layanan",
+        "description": "Pilih paket terbaik untuk mempercepat transformasi digital dan inovasi organisasi Anda.",
+        "meta": {
+            "targetMarket": [
+                "Startup",
+                "Badan Usaha",
+                "Korporasi",
+                "LSM",
+                "Pemerintah",
+                "UMKM"
+            ],
+            "targetMarketLabel": "Target Pasar",
+            "keyDeliverables": "Deliverables Utama",
+            "startFrom": "Mulai Dari"
+        },
+        "packages": {
+            "foundation": {
+                "title": "Fondasi Enterprise",
+                "program": "Program Pra-Akselerasi",
+                "product": "Platform Analitik Inti",
+                "price": "Rp 75Jt/tahun",
+                "cta": "Ajukan Konsultasi",
+                "targetMarket": ["Startup", "Badan Usaha"],
+                "deliverables": [
+                    "Analisis bisnis awal dan roadmap",
+                    "Akses ke tools analitik dasar",
+                    "Sesi mentoring bulanan",
+                    "Akses jaringan partner"
+                ]
+            },
+            "automation": {
+                "title": "Otomasi Proses Bisnis",
+                "program": "Program Akselerasi",
+                "product": "Workflow Automation Suite",
+                "price": "Rp 250Jt/tahun",
+                "cta": "Ajukan Konsultasi",
+                "targetMarket": ["UMKM", "Korporasi", "Badan Usaha"],
+                "deliverables": [
+                    "Audit proses dan strategi optimasi",
+                    "Implementasi otomasi kustom",
+                    "Pelatihan dan sertifikasi tim",
+                    "Dukungan berkelanjutan"
+                ]
+            },
+            "learning": {
+                "title": "Akselerator Pembelajaran Gamifikasi",
+                "program": "Program Pertumbuhan",
+                "product": "Platform Pembelajaran Interaktif",
+                "price": "Rp 150Jt/tahun",
+                "cta": "Ajukan Konsultasi",
+                "targetMarket": ["Korporasi", "Badan Usaha"],
+                "deliverables": [
+                    "Desain kurikulum dan gamifikasi",
+                    "Implementasi platform interaktif",
+                    "Dashboard analitik pengguna",
+                    "Evaluasi dampak berkala"
+                ]
+            },
+            "climate": {
+                "title": "Sistem Intelijen Iklim & Bencana",
+                "program": "Program Skala Dampak",
+                "product": "Platform Intelijen Iklim",
+                "price": "Rp 500Jt/tahun",
+                "cta": "Minta Penawaran Resmi",
+                "isGovernment": true,
+                "targetMarket": ["Pemerintah", "LSM"],
+                "deliverables": [
+                    "Integrasi data iklim real-time",
+                    "Pemodelan prediksi bencana",
+                    "Sistem peringatan dini",
+                    "Pelaporan pemerintah",
+                    "Dashboard keputusan"
+                ]
+            },
+            "flagship": {
+                "title": "Pengembangan Produk Penuh / Flagship",
+                "program": "Program Skala Enterprise",
+                "product": "Suite AI Komprehensif",
+                "price": "Rp 1.2M/tahun",
+                "cta": "Ajukan Konsultasi",
+                "targetMarket": ["Badan Usaha"],
+                "deliverables": [
+                    "Pengembangan produk kustom",
+                    "Infrastruktur enterprise",
+                    "Tim dukungan teknis",
+                    "Review strategi berkala",
+                    "Integrasi sistem"
+                ]
+            },
+            "partnership": {
+                "title": "Retainer Kemitraan Enterprise",
+                "program": "Program Kemitraan Strategis",
+                "product": "Full Platform + Solusi Kustom",
+                "price": "Rp 2.5M/tahun",
+                "cta": "Minta Penawaran Resmi",
+                "isGovernment": true,
+                "targetMarket": ["Pemerintah"],
+                "deliverables": [
+                    "Tim akun khusus",
+                    "Prioritas dukungan",
+                    "Pengembangan fitur kustom",
+                    "Perencanaan strategi bulanan",
+                    "Kolaborasi roadmap tahunan"
+                ]
+            }
+        },
+        "compliance": {
+            "label": "Paket Pemerintah & Perusahaan",
+            "description": "Paket yang ditandai dengan lencana pemerintah mencakup pelaporan kepatuhan, standar keamanan perusahaan, dan dukungan khusus. Harga bersifat indikatif dan dapat disesuaikan berdasarkan persyaratan spesifik. Hubungi kami untuk kutipan resmi dan solusi yang disesuaikan."
+        }
+    },
+    "enterprise": "Perusahaan",
+    "corporate": "Korporat",
+    "ngo": "LSM",
+    "government": "Pemerintah",
+    "requestConsultation": "Minta Konsultasi",
+    "requestQuotation": "Minta Kutipan Resmi",
+    "governmentBadge": "Pemerintah",
+    "partnerLabel": "Mitra Strategis",
+    "partnerTitle": "Ekosistem Kemitraan Kami",
+    "partnerDescription": "Kami bekerja sama dengan perusahaan, lembaga, dan organisasi sektor publik untuk membangun sistem kecerdasan yang dapat diskalakan dan mendorong transformasi berkelanjutan",
+    "becomePartner": "Jadilah Mitra",
+    "footerAbout": "Tentang Kami",
+    "footerVision": "Visi & Misi",
+    "footerPrograms": "Program",
+    "footerPricing": "Harga",
+    "footerContact": "Hubungi Kami",
+    "footerTerms": "Syarat & Ketentuan",
+    "footerPrivacy": "Kebijakan Privasi",
+    "footerCopyright": "Semua hak dilindungi",
+    "aboutLabel": "Siapa Kami",
+    "aboutTitle": "Visi & Misi",
+    "visionTitle": "Visi",
+    "visionDesc": "Bangun infrastruktur berbasis AI untuk ekosistem yang produktif, tangguh, dan berkelanjutan",
+    "missionTitle": "Misi",
+    "missionItem1": "Meningkatkan produktivitas menggunakan wawasan berbasis AI",
+    "missionItem2": "Memungkinkan operasi bisnis yang efisien dan berkelanjutan",
+    "missionItem3": "Menghubungkan pembelajaran, data, dan peluang ekonomi",
+    "partners": {
+        "label": "Kemitraan Strategis Terbuka",
+        "title": "Ekosistem Kolaborasi 2026",
+        "description": "Kami membuka sejumlah terbatas slot kolaborasi strategis bagi organisasi yang siap mengembangkan sistem transformasi berbasis AI secara bersama.",
+        "slots": {
+            "enterprise": {
+                "name": "Slot Kolaborasi Perusahaan",
+                "description": "Kesempatan kolaborasi selektif untuk proyek transformasi berdampak tinggi.",
+                "tier": "Terbuka untuk Pendaftaran"
+            },
+            "government": {
+                "name": "Slot Inisiatif Pemerintah",
+                "description": "Kesempatan kolaborasi selektif untuk proyek transformasi berdampak tinggi.",
+                "tier": "Terbuka untuk Pendaftaran"
+            },
+            "research": {
+                "name": "Slot Riset Institusional",
+                "description": "Kesempatan kolaborasi selektif untuk proyek transformasi berdampak tinggi.",
+                "tier": "Terbuka untuk Pendaftaran"
+            }
+        },
+        "enterpriseCard": {
+            "title": "Kolaborasi Perusahaan",
+            "description": "Mengembangkan sistem berbasis AI untuk efisiensi operasional, keberlanjutan, dan transformasi digital.",
+            "items": [
+                "Pengembangan sistem AI bersama",
+                "Integrasi infrastruktur data",
+                "Program transformasi operasional"
+            ],
+            "button": "Ajukan Kemitraan"
+        },
+        "innovationCard": {
+            "title": "Program Inovasi Strategis",
+            "description": "Inisiatif bersama yang berfokus pada teknologi iklim, intelijen industri, dan sistem keberlanjutan berbasis AI.",
+            "items": [
+                "Kolaborasi proyek percontohan",
+                "Program inovasi industri & pemerintah",
+                "Riset & implementasi AI terapan"
+            ],
+            "button": "Jelajahi Kolaborasi"
+        },
+        "footerNote": "Kolaborasi berbasis seleksi • Slot strategis terbatas"
+    },
+    "program": {
+        "label": "Program Inti",
+        "title": "Program & Inisiatif",
+        "description": "Program komprehensif kami dirancang untuk mendorong inovasi dan pertumbuhan berkelanjutan di berbagai industri",
+        "tabs": {
+            "industry": {
+                "label": "Industri Berkelanjutan",
+                "items": [
+                    {
+                        "title": "Platform Ekonomi Sirkular",
+                        "description": "Infrastruktur digital untuk penggunaan ulang dan optimalisasi rantai pasok sirkular.",
+                        "stats": "Hingga 30% pengurangan limbah"
+                    },
+                    {
+                        "title": "Sistem Pelacakan Limbah Pintar",
+                        "description": "Pelacakan limbah produksi secara real-time di seluruh operasi.",
+                        "stats": "Visibilitas penuh operasional"
+                    },
+                    {
+                        "title": "Optimasi Material AI",
+                        "description": "Rekomendasi berbasis AI untuk efisiensi penggunaan material.",
+                        "stats": "Efisiensi 20–40%"
+                    }
+                ]
+            },
+            "climate": {
+                "label": "Iklim & Risiko",
+                "items": [
+                    {
+                        "title": "Intelijen Risiko Iklim",
+                        "description": "Sistem prediksi dan pemetaan risiko berbasis AI.",
+                        "stats": "Visibilitas risiko real-time"
+                    },
+                    {
+                        "title": "Sistem Peringatan Dini",
+                        "description": "Sistem notifikasi bencana berbasis mobile.",
+                        "stats": "Respon lebih cepat"
+                    },
+                    {
+                        "title": "Analitik Karbon & Limbah",
+                        "description": "Dashboard ESG untuk pelaporan dan kepatuhan.",
+                        "stats": "Siap kepatuhan"
+                    }
+                ]
+            },
+            "ai": {
+                "label": "Infrastruktur AI",
+                "items": [
+                    {
+                        "title": "Mesin Rekomendasi AI",
+                        "description": "Sistem intelijen untuk rekomendasi real-time.",
+                        "stats": "Otomasi keputusan"
+                    },
+                    {
+                        "title": "Mesin Analitik Data",
+                        "description": "Lapisan data terpadu untuk pengambilan keputusan.",
+                        "stats": "Single source of truth"
+                    },
+                    {
+                        "title": "Lapisan Integrasi API",
+                        "description": "Integrasi dengan sistem ERP dan IoT.",
+                        "stats": "Siap enterprise"
+                    }
+                ]
+            }
+        },
+        "viewAll": "Lihat semua program"
+    }
+}

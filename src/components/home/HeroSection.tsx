@@ -1,11 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 import { ChevronDown } from 'lucide-react';
-import { useLanguage } from '../../context/LanguageContext';
+import { useTranslation } from "react-i18next";
 
 const HeroSection = () => {
   const heroRef = useRef<HTMLDivElement>(null);
-  const { t } = useLanguage();
-  
+  const { t } = useTranslation();
+
   useEffect(() => {
     const handleScroll = () => {
       if (!heroRef.current) return;
@@ -49,20 +49,20 @@ const HeroSection = () => {
         className="container mx-auto px-4 relative z-20 text-center"
       >
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-          <span className="block bg-gradient-to-r from-white via-white to-white/80 text-transparent bg-clip-text">{t('heroTitle')}</span>
+          <span className="block bg-gradient-to-r from-white via-white to-white/80 text-transparent bg-clip-text">{t('hero.title')}</span>
           <span className="block bg-gradient-to-r from-[#00f0ff] via-[#ff00c8] to-[#9c27b0] text-transparent bg-clip-text mt-2"></span>
         </h1>
 
         <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto mb-10 leading-relaxed">
-          {t('heroSubtitle')}
+          {t('hero.subtitle')}
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
           <button className="px-8 py-3 rounded-full bg-gradient-to-r from-[#00f0ff] to-[#00f0ff]/70 text-[#0a0a1f] font-medium hover:shadow-[0_0_20px_rgba(0,240,255,0.6)] transition-all duration-300 transform hover:scale-105">
-            {t('heroGetStarted')}
+            {t('hero.ctaPrimary')}
           </button>
           <button className="px-8 py-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white font-medium hover:bg-white/20 transition-all duration-300 flex items-center">
-            <span>{t('heroLearnMore')}</span>
+            <span>{t('hero.ctaSecondary')}</span>
           </button>
         </div>
       </div>

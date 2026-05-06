@@ -1,0 +1,261 @@
+{
+    "about": "About",
+    "programs": "Programs",
+    "pricing": "Pricing",
+    "donate": "Donate",
+    "partner": "Partner",
+    "hero": {
+        "title": "Shaping Tomorrow`s Innovations",
+        "subtitle": "Accelerating innovation through AI-powered infrastructure for startups and enterprises",
+        "ctaPrimary": "Get Started",
+        "ctaSecondary": "Learn More"
+    },
+    "price": {
+        "label": "Investment Plans",
+        "title": "Pricing & Services",
+        "description": "Choose the perfect package to accelerate your organization's digital transformation and innovation goals.",
+        "meta": {
+            "targetMarket": [
+                "Startup",
+                "Enterprise",
+                "Corporate",
+                "NGO",
+                "Government"
+            ],
+            "targetMarketLabel": "Target Market",
+            "keyDeliverables": "Key Deliverables",
+            "startFrom": "Start From"
+        },
+        "packages": {
+                "foundation": {
+                    "title": "Enterprise Foundation",
+                    "program": "Pre-Acceleration Program",
+                    "product": "Core Analytics Platform",
+                    "price": "Rp 75M/year",
+                    "cta": "Request Consultation",
+                    "targetMarket": ["Startup", "Enterprise"],
+                    "deliverables": [
+                        "Initial business assessment and roadmap",
+                        "Access to foundational analytics tools",
+                        "Monthly mentorship sessions",
+                        "Network access to partner ecosystem"
+                    ]
+                },
+                "automation": {
+                    "title": "Business Process Automation",
+                    "program": "Acceleration Track",
+                    "product": "Workflow Automation Suite",
+                    "price": "Rp 250M/year",
+                    "cta": "Request Consultation",
+                    "targetMarket": ["SME", "Corporate", "Enterprise"],
+                    "deliverables": [
+                        "Process audit and optimization strategy",
+                        "Custom automation implementation",
+                        "Team training and certification",
+                        "Ongoing support and optimization"
+                    ]
+                },
+                "learning": {
+                    "title": "Gamified Learning Accelerator",
+                    "program": "Growth Program",
+                    "product": "Interactive Learning Platform",
+                    "price": "Rp 150M/year",
+                    "cta": "Request Consultation",
+                    "targetMarket": ["Corporate", "Enterprise"],
+                    "deliverables": [
+                        "Curriculum design and gamification strategy",
+                        "Interactive platform deployment",
+                        "User engagement analytics dashboard",
+                        "Quarterly impact assessments"
+                    ]
+                },
+                "climate": {
+                    "title": "Climate & Disaster Intelligence System",
+                    "program": "Impact Scale Program",
+                    "product": "Climate Intelligence Platform",
+                    "price": "Rp 500M/year",
+                    "cta": "Request Official Quotation",
+                    "isGovernment": true,
+                    "targetMarket": ["Government", "NGO"],
+                    "deliverables": [
+                        "Real-time climate data integration",
+                        "Predictive disaster modeling",
+                        "Early warning system implementation",
+                        "Government compliance reporting",
+                        "Custom dashboards for decision-makers"
+                    ]
+                },
+                "flagship": {
+                    "title": "Full Product Development / Flagship",
+                    "program": "Enterprise Scale Program",
+                    "product": "Comprehensive AI-Powered Suite",
+                    "price": "Rp 1.2B/year",
+                    "cta": "Request Consultation",
+                    "targetMarket": ["Enterprise"],
+                    "deliverables": [
+                        "Custom product development and deployment",
+                        "Enterprise-grade infrastructure",
+                        "Dedicated technical support team",
+                        "Quarterly strategic reviews",
+                        "Custom integrations with existing systems"
+                    ]
+                },
+                "partnership": {
+                    "title": "Enterprise Partnership Retainer",
+                    "program": "Strategic Partnership Program",
+                    "product": "Full Platform Suite + Custom Solutions",
+                    "price": "Rp 2.5B/year",
+                    "cta": "Request Official Quotation",
+                    "isGovernment": true,
+                    "targetMarket": ["Government"],
+                    "deliverables": [
+                        "Dedicated account management team",
+                        "Priority support and implementation",
+                        "Custom feature development",
+                        "Monthly strategic planning sessions",
+                        "Annual product roadmap collaboration"
+                    ]
+                }
+        },
+        "compliance": {
+            "label": "Government & Enterprise Packages",
+            "description": "Packages marked with a government badge include compliance reporting, enterprise security standards, and dedicated support. Pricing is indicative and customizable based on specific requirements. Contact us for official quotations and tailored solutions."
+        }
+    },
+    "enterprise": "Enterprise",
+    "corporate": "Corporate",
+    "ngo": "NGO",
+    "government": "Government",
+    "governmentBadge": "Government",
+    "partnerLabel": "Strategic Partners",
+    "partnerTitle": "Our Partnership Ecosystem",
+    "partnerDescription": "We collaborate with enterprises, institutions, and public sector organizations to build scalable intelligence systems and drive sustainable transformation.",
+    "becomePartner": "Become a Partner",
+    "footerAbout": "About Us",
+    "footerVision": "Vision & Mission",
+    "footerPrograms": "Programs",
+    "footerPricing": "Pricing",
+    "footerContact": "Contact Us",
+    "footerTerms": "Terms & Conditions",
+    "footerPrivacy": "Privacy Policy",
+    "footerCopyright": "All rights reserved",
+    "aboutLabel": "Who We Are",
+    "aboutTitle": "Vision & Mission",
+    "visionTitle": "Vision",
+    "visionDesc": "Build AI-powered infrastructure for productive, resilient, and sustainable ecosystems",
+    "missionTitle": "Mission",
+    "missionItem1": "Improve productivity using AI-driven insights",
+    "missionItem2": "Enable efficient and sustainable business operations",
+    "missionItem3": "Connect learning, data, and economic opportunities",
+    "partners": {
+        "label": "Open Strategic Partnership",
+        "title": "Collaboration Ecosystem 2026",
+        "description": "We are opening a limited number of strategic collaboration slots for organizations ready to co-develop AI-driven transformation systems.",
+        "slots": {
+            "enterprise": {
+                "name": "Enterprise Collaboration Slot",
+                "description": "Selective collaboration opportunity for high-impact transformation projects.",
+                "tier": "Open for Application"
+            },
+            "government": {
+                "name": "Government Initiative Slot",
+                "description": "Selective collaboration opportunity for high-impact transformation projects.",
+                "tier": "Open for Application"
+            },
+            "research": {
+                "name": "Institutional Research Slot",
+                "description": "Selective collaboration opportunity for high-impact transformation projects.",
+                "tier": "Open for Application"
+            }
+        },
+        "enterpriseCard": {
+            "title": "Enterprise Collaboration",
+            "description": "Co-develop AI-powered systems for operational efficiency, sustainability, and digital transformation.",
+            "items": [
+                "AI system co-development",
+                "Data infrastructure integration",
+                "Operational transformation programs"
+            ],
+            "button": "Apply for Partnership"
+        },
+        "innovationCard": {
+            "title": "Strategic Innovation Program",
+            "description": "Joint initiatives focused on climate tech, industrial intelligence, and AI-driven sustainability systems.",
+            "items": [
+                "Pilot project collaboration",
+                "Industry & government innovation programs",
+                "Applied AI research & deployment"
+            ],
+            "button": "Explore Collaboration"
+        },
+        "footerNote": "Selection-based collaboration • Limited strategic slots available"
+    },
+    "program": {
+        "label": "Core Programs",
+        "title": "Programs & Initiatives",
+        "description": "Our comprehensive programs designed to drive innovation and sustainable growth across industries",
+        "tabs": {
+            "industry": {
+                "label": "Sustainable Industry",
+                "items": [
+                    {
+                        "title": "Circular Economy Platform",
+                        "description": "Digital infrastructure for reuse, recycling, and circular supply chain optimization.",
+                        "stats": "Up to 30% waste reduction"
+                    },
+                    {
+                        "title": "Smart Waste Tracking System",
+                        "description": "Real-time tracking of production waste across operations and supply chains.",
+                        "stats": "Full visibility across operations"
+                    },
+                    {
+                        "title": "AI Material Optimization",
+                        "description": "AI-driven recommendations to reduce material usage and improve production efficiency.",
+                        "stats": "20–40% efficiency gain"
+                    }
+                ]
+            },
+            "climate": {
+                "label": "Climate & Risk",
+                "items": [
+                    {
+                        "title": "Climate Risk Intelligence",
+                        "description": "AI-powered risk mapping and environmental prediction system.",
+                        "stats": "Real-time risk visibility"
+                    },
+                    {
+                        "title": "Early Warning System",
+                        "description": "Mobile-based alert system for disaster and environmental risk monitoring.",
+                        "stats": "Faster response time"
+                    },
+                    {
+                        "title": "Carbon & Waste Analytics",
+                        "description": "Enterprise dashboard for ESG tracking and compliance reporting.",
+                        "stats": "Compliance-ready insights"
+                    }
+                ]
+            },
+            "ai": {
+                "label": "AI Infrastructure",
+                "items": [
+                    {
+                        "title": "AI Recommendation Engine",
+                        "description": "Core intelligence system delivering real-time recommendations across operations.",
+                        "stats": "Decision automation"
+                    },
+                    {
+                        "title": "Data Analytics Engine",
+                        "description": "Unified data processing and analytics layer for enterprise decision-making.",
+                        "stats": "Single source of truth"
+                    },
+                    {
+                        "title": "Integration & API Layer",
+                        "description": "Seamless integration with ERP, IoT, and enterprise systems.",
+                        "stats": "Enterprise-ready deployment"
+                    }
+                ]
+            }
+        },
+        "viewAll": "View all programs"
+    }
+}

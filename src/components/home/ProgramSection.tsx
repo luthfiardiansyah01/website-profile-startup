@@ -1,176 +1,120 @@
-import React, { useState } from 'react';
-import { Lightbulb, Building, Users, Globe, ArrowRight, Rocket, Award, Target } from 'lucide-react';
-import ProgramCard from '../ui/ProgramCard';
-import { useLanguage } from '../../context/LanguageContext';
+import React, { useState } from "react";
+import { ArrowRight, Globe, Building, Lightbulb, Target, Rocket, Award } from "lucide-react";
+import ProgramCard from "../ui/ProgramCard";
+import { useTranslation } from "react-i18next";
 
 const ProgramSection = () => {
-  const [activeTab, setActiveTab] = useState('industry');
-  const { t } = useLanguage();
+  const [activeTab, setActiveTab] = useState("industry");
+  const { t } = useTranslation();
 
-  const industryPrograms = [
-    {
-      id: 1,
-      title: "Circular Economy Platform",
-      description: "Digital infrastructure for reuse, recycling, and circular supply chain optimization.",
-      icon: <Globe className="w-6 h-6" />,
-      stats: "Up to 30% waste reduction",
-      color: "from-[#00f0ff] to-[#059669]"
-    },
-    {
-      id: 2,
-      title: "Smart Waste Tracking System",
-      description: "Real-time tracking of production waste across operations and supply chains.",
-      icon: <Building className="w-6 h-6" />,
-      stats: "Full visibility across operations",
-      color: "from-[#00f0ff] to-[#2563eb]"
-    },
-    {
-      id: 3,
-      title: "AI Material Optimization",
-      description: "AI-driven recommendations to reduce material usage and improve production efficiency.",
-      icon: <Lightbulb className="w-6 h-6" />,
-      stats: "20–40% efficiency gain",
-      color: "from-[#ff00c8] to-[#9c27b0]"
-    }
-  ];
-
-  const climatePrograms = [
-    {
-      id: 4,
-      title: "Climate Risk Intelligence",
-      description: "AI-powered risk mapping and environmental prediction system.",
-      icon: <Target className="w-6 h-6" />,
-      stats: "Real-time risk visibility",
-      color: "from-[#00f0ff] to-[#3b82f6]"
-    },
-    {
-      id: 5,
-      title: "Early Warning System",
-      description: "Mobile-based alert system for disaster and environmental risk monitoring.",
-      icon: <Rocket className="w-6 h-6" />,
-      stats: "Faster response time",
-      color: "from-[#ff00c8] to-[#9c27b0]"
-    },
-    {
-      id: 6,
-      title: "Carbon & Waste Analytics",
-      description: "Enterprise dashboard for ESG tracking and compliance reporting.",
-      icon: <Award className="w-6 h-6" />,
-      stats: "Compliance-ready insights",
-      color: "from-[#00f0ff] to-[#2563eb]"
-    }
-  ];
-  const aiPrograms = [
-    {
-      id: 7,
-      title: "AI Recommendation Engine",
-      description: "Core intelligence system delivering real-time recommendations across all operations.",
-      icon: <Lightbulb className="w-6 h-6" />,
-      stats: "Decision automation",
-      color: "from-[#ff00c8] to-[#9c27b0]"
-    },
-    {
-      id: 8,
-      title: "Data Analytics Engine",
-      description: "Unified data processing and analytics layer for enterprise decision-making.",
-      icon: <Building className="w-6 h-6" />,
-      stats: "Single source of truth",
-      color: "from-[#00f0ff] to-[#2563eb]"
-    },
-    {
-      id: 9,
-      title: "Integration & API Layer",
-      description: "Seamless integration with ERP, IoT, and existing enterprise systems.",
-      icon: <Rocket className="w-6 h-6" />,
-      stats: "Enterprise-ready deployment",
-      color: "from-[#00f0ff] to-[#3b82f6]"
-    }
-  ];
-
-  const getPrograms = () => {
-    switch(activeTab) {
-      case 'industry':
-        return industryPrograms;
-      case 'climate':
-        return climatePrograms;
-      case 'ai':
-        return aiPrograms;
-      default:
-        return industryPrograms;
-    }
+  // ✅ ICON MAP (per program index per tab)
+  const iconMap: Record<string, React.ReactNode[]> = {
+    industry: [
+      <Globe className="w-6 h-6 text-white" />,
+      <Building className="w-6 h-6 text-white" />,
+      <Lightbulb className="w-6 h-6 text-white" />
+    ],
+    climate: [
+      <Target className="w-6 h-6 text-white" />,
+      <Rocket className="w-6 h-6 text-white" />,
+      <Award className="w-6 h-6 text-white" />
+    ],
+    ai: [
+      <Lightbulb className="w-6 h-6 text-white" />,
+      <Building className="w-6 h-6 text-white" />,
+      <Rocket className="w-6 h-6 text-white" />
+    ]
   };
+
+  // ✅ COLOR MAP (prevents "undefined" Tailwind bug)
+  const colorMap: Record<string, string[]> = {
+    industry: [
+      "from-[#00f0ff] to-[#059669]",
+      "from-[#00f0ff] to-[#2563eb]",
+      "from-[#ff00c8] to-[#9c27b0]"
+    ],
+    climate: [
+      "from-[#00f0ff] to-[#3b82f6]",
+      "from-[#ff00c8] to-[#9c27b0]",
+      "from-[#00f0ff] to-[#2563eb]"
+    ],
+    ai: [
+      "from-[#ff00c8] to-[#9c27b0]",
+      "from-[#00f0ff] to-[#2563eb]",
+      "from-[#00f0ff] to-[#3b82f6]"
+    ]
+  };
+
+  // ✅ GET DATA FROM i18n (SAFE)
+  const programs =
+    (t(`program.tabs.${activeTab}.items`, {
+      returnObjects: true
+    }) as any[]) || [];
+
+  // ✅ MERGE UI + CONTENT
+  const programsWithIcons = programs.map((p, i) => ({
+    ...p,
+    icon: iconMap[activeTab]?.[i] ?? <div className="w-2 h-2 bg-white rounded-full" />,
+    color: colorMap[activeTab]?.[i] ?? "from-gray-500 to-gray-700"
+  }));
 
   return (
     <section id="programs" className="py-20 relative">
       <div className="container mx-auto px-4">
+
+        {/* Header */}
         <div className="text-center mb-16">
-          <span className="text-[#00f0ff] uppercase tracking-wider text-sm font-medium">{t('programsLabel')}</span>
+          <span className="text-[#00f0ff] uppercase tracking-wider text-sm font-medium">
+            {t("program.label")}
+          </span>
+
           <h2 className="text-3xl md:text-4xl font-bold mt-2 bg-gradient-to-r from-white to-white/80 text-transparent bg-clip-text">
-            {t('programsTitle')}
+            {t("program.title")}
           </h2>
+
           <p className="mt-4 text-white/70 max-w-2xl mx-auto">
-            {t('programsDescription')}
+            {t("program.description")}
           </p>
         </div>
 
         {/* Tabs */}
         <div className="flex justify-center mb-12">
           <div className="inline-flex bg-white/5 backdrop-blur-sm rounded-full p-1">
-            <button
-              onClick={() => setActiveTab('industry')}
-              className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                activeTab === 'social'
-                  ? 'bg-gradient-to-r from-[#00f0ff] to-[#00f0ff]/70 text-[#0a0a1f] shadow-[0_0_10px_rgba(0,240,255,0.4)]'
-                  : 'text-white/70 hover:text-white'
-              }`}
-            >
-              Sustainable Industry
-            </button>
-            <button
-              onClick={() => setActiveTab('climate')}
-              className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                activeTab === 'business'
-                  ? 'bg-gradient-to-r from-[#ff00c8] to-[#ff00c8]/70 text-white shadow-[0_0_10px_rgba(255,0,200,0.4)]'
-                  : 'text-white/70 hover:text-white'
-              }`}
-            >
-              Climate & Risk
-            </button>
-            <button
-              onClick={() => setActiveTab('ai')}
-              className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                activeTab === 'business'
-                  ? 'bg-gradient-to-r from-[#ff00c8] to-[#ff00c8]/70 text-white shadow-[0_0_10px_rgba(255,0,200,0.4)]'
-                  : 'text-white/70 hover:text-white'
-              }`}
-            >
-              AI Infrastructure
-            </button>
+            {["industry", "climate", "ai"].map((tab) => (
+              <button
+                key={tab}
+                onClick={() => setActiveTab(tab)}
+                className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                  activeTab === tab
+                    ? "bg-gradient-to-r from-[#00f0ff] to-[#00f0ff]/70 text-[#0a0a1f]"
+                    : "text-white/70 hover:text-white"
+                }`}
+              >
+                {t(`program.tabs.${tab}.label`)}
+              </button>
+            ))}
           </div>
         </div>
 
-        {/* Program Cards */}
+        {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {getPrograms().map((program) => (
-            <ProgramCard key={program.id} program={program} />
+          {programsWithIcons.map((program, i) => (
+            <ProgramCard key={i} program={program} />
           ))}
         </div>
 
-        {/* View All Link */}
+        {/* View all */}
         <div className="text-center mt-12">
-          <a 
-            href="#" 
+          <a
+            href="#"
             className="inline-flex items-center gap-2 text-white/80 hover:text-[#00f0ff] transition-colors group"
           >
-            <span>View all programs</span>
+            <span>{t("program.viewAll")}</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </a>
         </div>
-      </div>
 
-      {/* Decorative Background Elements */}
-      <div className="absolute top-1/4 right-0 w-[300px] h-[300px] bg-[#9c27b0] opacity-20 blur-[100px] rounded-full"></div>
-      <div className="absolute bottom-1/4 left-0 w-[250px] h-[250px] bg-[#00f0ff] opacity-20 blur-[100px] rounded-full"></div>
+      </div>
     </section>
   );
 };

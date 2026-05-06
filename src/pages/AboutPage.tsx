@@ -1,9 +1,9 @@
 import React from 'react';
 import { Target, Lightbulb, TrendingUp, Zap } from 'lucide-react';
-import { useLanguage } from '../context/LanguageContext';
+import { useTranslation } from 'react-i18next';
 
 const AboutPage = () => {
-  const { t } = useLanguage();
+  const { t } = useTranslation();
 
   return (
     <div className="min-h-screen pt-24 pb-20">
